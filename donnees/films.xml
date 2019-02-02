@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FILMS>
+	  <FILM annee="1958">
+		<TITRE>Vertigo</TITRE>
+		<GENRE>Drame</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>James</PRENOM>
+			<NOM>Stewart</NOM>
+			<INTITULE>John Ferguson</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Kim</PRENOM>
+			<NOM>Novak</NOM>
+			<INTITULE>Madeleine Elster</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1999">
+		<TITRE>Sleepy Hollow</TITRE>
+		<GENRE>Fantastique</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Johnny</PRENOM>
+			<NOM>Depp</NOM>
+			<INTITULE>Constable Ichabod Crane</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Christina</PRENOM>
+			<NOM>Ricci</NOM>
+			<INTITULE>Katrina Anne Van Tassel</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Christopher</PRENOM>
+			<NOM>Walken</NOM>
+			<INTITULE>Le cavalier</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1979">
+		<TITRE>Alien</TITRE>
+		<GENRE>Science-fiction</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Sigourney</PRENOM>
+			<NOM>Stewart</NOM>
+			<INTITULE>Ripley</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1997">
+		<TITRE>Titanic</TITRE>
+		<GENRE>Drame</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Kate</PRENOM>
+			<NOM>Winslet</NOM>
+			<INTITULE>Rose DeWitt Bukater</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Leonardo</PRENOM>
+			<NOM>DiCaprio</NOM>
+			<INTITULE>Jack Dawson</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1997">
+		<TITRE>Volte/Face</TITRE>
+		<GENRE>Action</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>John</PRENOM>
+			<NOM>Travolta</NOM>
+			<INTITULE>Sean Archer/Castor Troy</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Nicolas</PRENOM>
+			<NOM>Cage</NOM>
+			<INTITULE>Castor Troy/Sean Archer</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1999">
+		<TITRE>American Beauty</TITRE>
+		<GENRE>Comedie</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Kevin</PRENOM>
+			<NOM>Spacey</NOM>
+			<INTITULE>Lester Burnham</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Anette</PRENOM>
+			<NOM>Bening</NOM>
+			<INTITULE>Carolyn Burnham</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1992">
+		<TITRE>Impitoyable</TITRE>
+		<GENRE>Western</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Clint</PRENOM>
+			<NOM>Eastwood</NOM>
+			<INTITULE>William Munny</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Gene</PRENOM>
+			<NOM>Hackman</NOM>
+			<INTITULE>Little Bill Dagget</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Morgan</PRENOM>
+			<NOM>Freeman</NOM>
+			<INTITULE>Ned Logan</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="2000">
+		<TITRE>Gladiator</TITRE>
+		<GENRE>Drame</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Russell</PRENOM>
+			<NOM>Crowe</NOM>
+			<INTITULE>Maximus</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1982">
+		<TITRE>Blade Runner</TITRE>
+		<GENRE>Action</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Harrison</PRENOM>
+			<NOM>Ford</NOM>
+			<INTITULE>Deckard</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Rutger</PRENOM>
+			<NOM>Hauer</NOM>
+			<INTITULE>Batty</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1988">
+		<TITRE>Piege de cristal</TITRE>
+		<GENRE>Action</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Bruce</PRENOM>
+			<NOM>Willis</NOM>
+			<INTITULE>McClane</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1990">
+		<TITRE>58 minutes pour vivre</TITRE>
+		<GENRE>Action</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Bruce</PRENOM>
+			<NOM>Willis</NOM>
+			<INTITULE>McLane</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1990">
+		<TITRE>Van Gogh</TITRE>
+		<GENRE>Drame</GENRE>
+		<PAYS>FR</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Jacques</PRENOM>
+			<NOM>Dutronc</NOM>
+			<INTITULE>Van Gogh</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1995">
+		<TITRE>Seven</TITRE>
+		<GENRE>Policier</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Kevin</PRENOM>
+			<NOM>Spacey</NOM>
+			<INTITULE>Doe</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Morgan</PRENOM>
+			<NOM>Freeman</NOM>
+			<INTITULE>Somerset</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Brad</PRENOM>
+			<NOM>Pitt</NOM>
+			<INTITULE>Mills</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1995">
+		<TITRE>L'armee des douze singes</TITRE>
+		<GENRE>Science-fiction</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Bruce</PRENOM>
+			<NOM>Willis</NOM>
+			<INTITULE>Cole</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1986">
+		<TITRE>Le nom de la rose</TITRE>
+		<GENRE>Policier</GENRE>
+		<PAYS>FR</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Sean</PRENOM>
+			<NOM>Connery</NOM>
+			<INTITULE>Baskerville</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Christian</PRENOM>
+			<NOM>Slater</NOM>
+			<INTITULE>de Melk</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1994">
+		<TITRE>Pulp fiction</TITRE>
+		<GENRE>Action</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>John</PRENOM>
+			<NOM>Travolta</NOM>
+			<INTITULE>Vincent Vega</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Bruce</PRENOM>
+			<NOM>Willis</NOM>
+			<INTITULE>Butch Coolidge</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Samuel L.</PRENOM>
+			<NOM>Jackson</NOM>
+			<INTITULE>Jules Winnfield</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Rosanna</PRENOM>
+			<NOM>Arquette</NOM>
+			<INTITULE>Jody</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Uma</PRENOM>
+			<NOM>Thurman</NOM>
+			<INTITULE>Mia Wallace</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1998">
+		<TITRE>Mary a tout prix</TITRE>
+		<GENRE>Comedie</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Cameron</PRENOM>
+			<NOM>Diaz</NOM>
+			<INTITULE>Mary Jensen Matthews</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Mat</PRENOM>
+			<NOM>Dillon</NOM>
+			<INTITULE>Pat Healy</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1984">
+		<TITRE>Terminator</TITRE>
+		<GENRE>Science-fiction</GENRE>
+		<PAYS>USA</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Arnold</PRENOM>
+			<NOM>Schwartzenegger</NOM>
+			<INTITULE>Terminator</INTITULE>
+		  </ROLE>
+		</ROLES>
+	  </FILM>
+	  <FILM annee="1975">
+		<TITRE>Les dents de la mer</TITRE>
+		<GENRE>Horreur</GENRE>
+		<PAYS>FR</PAYS>
+		<ROLES>
+		  <ROLE>
+			<PRENOM>Roy</PRENOM>
+			<NOM>Sheider</NOM>
+			<INTITULE>Martin Brody</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Robert</PRENOM>
+			<NOM>Shaw</NOM>
+			<INTITULE>Quint</INTITULE>
+		  </ROLE>
+		  <ROLE>
+			<PRENOM>Richard</PRENOM>
+			<NOM>Dreyfus</NOM>
+			<INTITULE>Matt Hooper</INTITULE>
+		  </ROLE>
+		</ROLES>
+		</FILM>
+	  <FILM annee="1990">
+    <TITRE>Le silence des agneaux</TITRE>
+    <GENRE>Policier</GENRE>
+    <PAYS>USA</PAYS>
+    <ROLES>
+      <ROLE>
+        <PRENOM>Anthony</PRENOM>
+        <NOM>Hopkins</NOM>
+        <INTITULE>Dr. Hannibal Lecter</INTITULE>
+      </ROLE>
+      <ROLE>
+        <PRENOM>Jodie</PRENOM>
+        <NOM>Foster</NOM>
+        <INTITULE>Clarice Starling</INTITULE>
+      </ROLE>
+    </ROLES>
+   </FILM>
+</FILMS>
