@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AVIONS>
+	<AVION annee="1958">
+		<NOM>JAS 39 Gripen</NOM>
+		<IMAGE>1_JAS_39_Gripen</IMAGE>
+		<VITESSE>Vertigo</VITESSE>
+		<COUT>50000000 USD</COUT>
+		<MOTEUR>Volvo Aero RM12; Gripen NG: General Electric F414G</MOTEUR>
+		<DESCRIPTION>Le JAS 39 Gripen est un avion multirôle de quatrième génération développé par la Suède dans les années 1980. USD</COUT>		
+	</AVION>
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>60000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>70000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>80000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>90000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>55000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>	
+	<AVION annee="">
+		<NOM></NOM>
+		<IMAGE></IMAGE>
+		<VITESSE></VITESSE>
+		<COUT>65000000 USD</COUT>
+		<MOTEUR></MOTEUR>
+		<DESCRIPTION></COUT>		
+	</AVION>
+</AVIONS>
