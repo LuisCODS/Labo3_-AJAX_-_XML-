@@ -17,53 +17,44 @@ var listeFilms;
 */
 function listerFilms()
 {
-	//recoit un array avec tous les tags <FIML> au singulier
-	var tabFilms = listeFilms.getElementsByTagName("FILM");
+	//recoit un array avec tous les tags <AVION> au singulier
+	var tabFilms = listeFilms.getElementsByTagName("AVION");
 	var taille = tabFilms.length;
 	
-	var rep="<span onClick=\"$('#contenu').hide();\">X</span>";
+	//var rep="<span onClick=\"$('#contenu').hide();\">X</span>";
 		//Representation de la table en HTML
-		rep+="<table border=1>";
-		rep+="<tr><th>TITRE</th><th>GENRE</th><th>PAYS</th><th>ROLES</th></tr>";
-		rep+="<caption>LISTE DES FILMS</caption>";
+	var	rep="<table border=1 >";
+		// rep+="<table >";
+		rep+="<tr><th>IMAGE</th><th>NOM</th><th>VITESSE</th><th>COUT</th><th>MOTEUR</th><th>DESCRIPTION</th></tr>";
+		// rep+="<caption>LISTE DES AVIONS</caption>";
 
 	for(var i = 0; i < taille; i++)
 	{
 		//pega os textos...
-		var titre = tabFilms[i].getElementsByTagName("TITRE")[0].firstChild.nodeValue;
-		var genre = tabFilms[i].getElementsByTagName("GENRE")[0].firstChild.nodeValue;
-		var pays = tabFilms[i].getElementsByTagName("PAYS")[0].firstChild.nodeValue;
+		var imageSRC = tabFilms[i].getElementsByTagName("IMAGE")[0].firstChild.nodeValue;
+		var nom = tabFilms[i].getElementsByTagName("NOM")[0].firstChild.nodeValue;
+		var vitesse = tabFilms[i].getElementsByTagName("VITESSE")[0].firstChild.nodeValue;
+		var cout = tabFilms[i].getElementsByTagName("COUT")[0].firstChild.nodeValue;
+		var moteur = tabFilms[i].getElementsByTagName("MOTEUR")[0].firstChild.nodeValue;
+		var description = tabFilms[i].getElementsByTagName("DESCRIPTION")[0].firstChild.nodeValue;		
+		//IMAGE...
+		var image = "<img src="+imageSRC+" height="+200+" width="+200+">";		
 		//cria uma linha preenchendo as colunas com os textos.
-		//la <tr> reste ouverte
-		rep+="<tr><td>"+titre+"</td><td>"+genre+"</td><td>"+pays+"</td>";
-		
-		//recoit un array avec tous les tags <ROLE> au singulier
-		var tabRoles = tabFilms[i].getElementsByTagName("ROLE");
-		var taille2 = tabRoles.length;
-		var liste="";
-		for(var j = 0; j < taille2; j++)
-		{
-			//pega os textos...
-			var prenom = tabRoles[j].getElementsByTagName("PRENOM")[0].firstChild.nodeValue;
-			var nom = tabRoles[j].getElementsByTagName("NOM")[0].firstChild.nodeValue;
-			var intitule = tabRoles[j].getElementsByTagName("INTITULE")[0].firstChild.nodeValue;
-			//
-			liste+="Role:"+prenom+","+nom+","+intitule+"<br>";
-		}
-		//acrescenta a ultima coluna em seguida fecha a tag <tr>
-		rep+="<td>"+liste+"</td></tr>";
+		rep+="<tr><td>"+image+"</td><td>"+nom+"</td><td>"+vitesse+"</td><td>"+cout+"</td><td>"+moteur+"</td><td>"+description+"</td></tr>";		
 	}
+	
 	//fecha  a table
 	rep+="</table>";
-	$('#contenu').html(rep);//display table aready ready inside the div
-	$('#contenu').show();
+	$('#col-right').html(rep);//display table aready ready inside the div
+	$('#col-right').show();
 }
 
+//requette ajax...
 function chargerFilms()
 {
 	$.ajax({
 		type:"GET",
-		url:"donnees/films.xml",
+		url:"donnees/avion.xml",
 		dataType:"xml",
 		success : function(data)
 		{

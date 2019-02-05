@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AVIONS>
 	<AVION annee="1980">
-		<NOM>JAS 39 Gripen</NOM>
-		<IMAGE>images/JAS_39_Gripen</IMAGE>
+		<IMAGE>images/JAS_39_Gripen.jpg</IMAGE>
+		<NOM>JAS 39 Gripen</NOM>		
 		<VITESSE>Vertigo</VITESSE>
 		<COUT>50000000 USD</COUT>
 		<MOTEUR>Volvo Aero RM12; Gripen NG: General Electric F414G</MOTEUR>
 		<DESCRIPTION>Le JAS 39 Gripen est un avion multirôle de quatrième génération développé par la Suède dans les années 1980. USD</DESCRIPTION>		
 	</AVION>
 	<AVION annee="1991">
-		<NOM>Dassault Rafale</NOM>
-		<IMAGE>images/Rafale</IMAGE>
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>Dassault Rafale</NOM>		
 		<VITESSE>2 203 km/h</VITESSE>
 		<COUT>60000000 USD</COUT>
 		<MOTEUR>Snecma M88-2</MOTEUR>
-		<DESCRIPTION></DESCRIPTION>		
+		<DESCRIPTION>Gripen</DESCRIPTION>		
 	</AVION>
-	<AVION annee="">
-		<NOM></NOM>
-		<IMAGE>images/</IMAGE>
-		<VITESSE></VITESSE>
-		<COUT>70000000 USD</COUT>
-		<MOTEUR></MOTEUR>
-		<DESCRIPTION></DESCRIPTION>		
+	<AVION annee="1991">
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>NOM</NOM>		
+		<VITESSE>VITESSE</VITESSE>
+		<COUT>COUT</COUT>
+		<MOTEUR>MOTEUR</MOTEUR>
+		<DESCRIPTION>DESCRIPTION</DESCRIPTION>		
 	</AVION>
-	<AVION annee="">
-		<NOM></NOM>
-		<IMAGE>images/</IMAGE>
-		<VITESSE></VITESSE>
-		<COUT>80000000 USD</COUT>
-		<MOTEUR></MOTEUR>
-		<DESCRIPTION></DESCRIPTION>		
+	<AVION annee="1991">
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>Dassault Rafale</NOM>		
+		<VITESSE>2 203 km/h</VITESSE>
+		<COUT>60000000 USD</COUT>
+		<MOTEUR>Snecma M88-2</MOTEUR>
+		<DESCRIPTION>Gripen</DESCRIPTION>		
 	</AVION>
-	<AVION annee="">
-		<NOM></NOM>
-		<IMAGE>images/</IMAGE>
-		<VITESSE></VITESSE>
-		<COUT>90000000 USD</COUT>
-		<MOTEUR></MOTEUR>
-		<DESCRIPTION></DESCRIPTION>		
+		<AVION annee="1991">
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>Dassault Rafale</NOM>		
+		<VITESSE>2 203 km/h</VITESSE>
+		<COUT>60000000 USD</COUT>
+		<MOTEUR>Snecma M88-2</MOTEUR>
+		<DESCRIPTION>Gripen</DESCRIPTION>		
 	</AVION>
-	<AVION annee="">
-		<NOM></NOM>
-		<IMAGE>images/</IMAGE>
-		<VITESSE></VITESSE>
-		<COUT>55000000 USD</COUT>
-		<MOTEUR></MOTEUR>
-		<DESCRIPTION></DESCRIPTION>		
-	</AVION>	
-	<AVION annee="">
-		<NOM></NOM>
-		<IMAGE>images/</IMAGE>
-		<VITESSE></VITESSE>
-		<COUT>65000000 USD</COUT>
-		<MOTEUR></MOTEUR>
-		<DESCRIPTION></DESCRIPTION>	
+		<AVION annee="1991">
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>Dassault Rafale</NOM>		
+		<VITESSE>2 203 km/h</VITESSE>
+		<COUT>60000000 USD</COUT>
+		<MOTEUR>Snecma M88-2</MOTEUR>
+		<DESCRIPTION>Gripen</DESCRIPTION>		
+	</AVION>
+		<AVION annee="1991">
+		<IMAGE>images/Rafale.jpg</IMAGE>
+		<NOM>Dassault Rafale</NOM>		
+		<VITESSE>2 203 km/h</VITESSE>
+		<COUT>60000000 USD</COUT>
+		<MOTEUR>Snecma M88-2</MOTEUR>
+		<DESCRIPTION>Gripen</DESCRIPTION>		
 	</AVION>
 </AVIONS>
