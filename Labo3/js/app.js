@@ -1,10 +1,14 @@
+
+// ===================================== CLASSE PRODUIT =====================================
+//Classe
 function Produit() {
     this.id;
     this.categorie;
     this.titre;
     this.prix;
     this.images=[];
-} //fin de la classe Voiture
+} 
+//Constructeur
 Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
     if (arguments.length == 0) {
         this.id = null;
@@ -25,8 +29,8 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.setPrix(prix);
         this.setImages(images);
     }
-} //fin des constructeurs
-
+} 
+// getters et setters
 Produit.prototype.getId = function () {
     return this.id;
 }
@@ -57,23 +61,24 @@ Produit.prototype.setPrix = function (prix) {
 Produit.prototype.setImages = function (images) {
         this.images = images;
 }
-
+// méthodes
 Produit.prototype.afficher = function () {
     var contenu = "<div class='col-lg-3 col-md-4'>";
-    contenu+="<div class='product'>";
-    contenu+="<div class='flip-container'>";
-    contenu+="<div class='flipper'>";
-    contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-    contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-    contenu+="</div></div>";
-    contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
-    contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
-    contenu+="<p class='price'><del></del>"+this.prix+"</p>";
-    contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
-    contenu+="</div></div></div>";
+		contenu+="<div class='product'>";
+		contenu+="<div class='flip-container'>";
+		contenu+="<div class='flipper'>";
+		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="</div></div>";
+		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
+		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
+		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
+		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
+		contenu+="</div></div></div>";
 
     return contenu;
 }
+// ===================================== FIN - CLASSE PRODUIT  =====================================
 
 var tableauProduitsXML, tableauProduits = new Array(), panier=[];
 
@@ -88,7 +93,7 @@ function ajouterAuPanier(id) {
     zonePanier();
     console.log(panier);
  }
- function existe(id) { 
+function existe(id) { 
     if (panier.length>0)
         for (var i = 0; i < panier.length; i++)
             if (panier[i].id==id)
