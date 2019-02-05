@@ -80,7 +80,10 @@ Produit.prototype.afficher = function () {
 }
 // ===================================== FIN - CLASSE PRODUIT  =====================================
 
-var tableauProduitsXML, tableauProduits = new Array(), panier=[];
+//global
+var tableauProduitsXML;
+var tableauProduits = new Array();
+var panier=[];
 
 function ajouterAuPanier(id) { 
     if (existe(id)){
@@ -117,16 +120,19 @@ function produitById(id) {
             return tableauProduits[i]
 }
 
+//MAIN
 $(document).ready(function () {
     chargerProuits();
 });
+
+//Fait la requête Ajax pour extraire les données provenant du fichier XML
 function chargerProuits(){
 	$.ajax({
 		type:"GET",
 		url:"data/produits.xml",
 		dataType:"xml",
 		success : function(liste){
-			tableauProduitsXML=liste;
+			tableauProduitsXML = liste;// recoit les données importées du fichier XML
             RemplirTableauProduits();
             $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
@@ -135,11 +141,15 @@ function chargerProuits(){
 		}
 	});
 }
-
+// Cree un array pour faire la transformation des données importées en Objets<Produit>
 function RemplirTableauProduits() {
+	//extrait les données importées en format tableau 
     var tab = tableauProduitsXML.getElementsByTagName("produit");
     var contenu="";
-    for (var i = 0; i < tab.length; i++) {
+	//pour chaque indice un nouveau Produit...
+    for (var i = 0; i < tab.length; i++) 
+	{
+		//transition des donnes
         tableauProduits[i] = new Produit();
         var images = [tab[i].childNodes[9].childNodes[1].innerHTML,tab[i].childNodes[9].childNodes[3].innerHTML];
         tableauProduits[i].Produit(tab[i].childNodes[1].innerHTML, tab[i].childNodes[3].innerHTML, tab[i].childNodes[5].innerHTML, tab[i].childNodes[7].innerHTML, images);
@@ -147,3 +157,18 @@ function RemplirTableauProduits() {
     }
     $('#listeProduits').html(contenu);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
