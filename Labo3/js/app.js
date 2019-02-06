@@ -165,7 +165,7 @@ function RemplirTableauProduits() {
 						tableau[i].childNodes[9].childNodes[1].innerHTML,
 						tableau[i].childNodes[9].childNodes[3].innerHTML
 					 ];
-		//peuple les proprietes du Produit vide en fournissant au constructeur les 5 parametres...
+		//peuple les proprietes du Produit vide en fournissant a son constructeur les 5 parametres...
         tableauProduits[i].Produit(
 									tableau[i].childNodes[1].innerHTML,	//id
 									tableau[i].childNodes[3].innerHTML, // categorie
