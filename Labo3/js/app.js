@@ -213,23 +213,6 @@ Produit.prototype.afficher = function () {
     return contenu;
 }
 
-Produit.prototype.showPantalosByCat = function () {
-    var contenu = "<div class='col-lg-3 col-md-4'>";
-		contenu+="<div class='product'>";
-		contenu+="<div class='flip-container'>";
-		contenu+="<div class='flipper'>";
-		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"'  height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="</div></div>";
-		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a>";
-		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
-		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
-		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
-		contenu+="</div></div></div>";
-
-    return contenu;
-}
-
 // ===================================== FIN - CLASSE PRODUIT =====================================
 
 
