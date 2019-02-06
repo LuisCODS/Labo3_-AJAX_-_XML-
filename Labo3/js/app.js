@@ -1,5 +1,5 @@
 
-// ===================================== CLASSE PRODUIT =====================================
+// ===================================== DEBUT - CLASSE PRODUIT =====================================
 //Classe
 function Produit() {
     this.id;
@@ -85,6 +85,13 @@ var tableauProduitsXML;
 var tableauProduits = new Array();
 var panier=[];
 
+//MAIN
+$(document).ready(function () {
+    chargerProuits();
+});
+
+// ===================================== METHODES  =====================================
+
 function ajouterAuPanier(id) { 
     if (existe(id)){
         for (var i = 0; i < panier.length; i++)
@@ -96,6 +103,7 @@ function ajouterAuPanier(id) {
     zonePanier();
     console.log(panier);
  }
+ 
 function existe(id) { 
     if (panier.length>0)
         for (var i = 0; i < panier.length; i++)
@@ -103,6 +111,7 @@ function existe(id) {
                 return true;
        return false;
 }
+
 function zonePanier() {
     var prixTotal=0, nbrProduits=0;
     if (panier.length>0) {
@@ -114,16 +123,12 @@ function zonePanier() {
     }
     $('#panier').html("("+nbrProduits+") " +prixTotal+" $");
 }
+
 function produitById(id) {
     for (var i in tableauProduits)
         if (parseInt(tableauProduits[i].id,10)==id)
             return tableauProduits[i]
 }
-
-//MAIN
-$(document).ready(function () {
-    chargerProuits();
-});
 
 //Fait la requête Ajax pour extraire les données provenant du fichier XML
 function chargerProuits(){
@@ -132,7 +137,7 @@ function chargerProuits(){
 		url:"data/produits.xml",
 		dataType:"xml",
 		success : function(liste){
-			tableauProduitsXML = liste;// recoit les données importées du fichier XML
+			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau des Produit)
             RemplirTableauProduits();
             $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
@@ -141,21 +146,36 @@ function chargerProuits(){
 		}
 	});
 }
+
 // Cree un array pour faire la transformation des données importées en Objets<Produit>
 function RemplirTableauProduits() {
-	//extrait les données importées en format tableau 
-    var tab = tableauProduitsXML.getElementsByTagName("produit");
-    var contenu="";
-	//pour chaque indice un nouveau Produit...
-    for (var i = 0; i < tab.length; i++) 
-	{
-		//transition des donnes
-        tableauProduits[i] = new Produit();
-        var images = [tab[i].childNodes[9].childNodes[1].innerHTML,tab[i].childNodes[9].childNodes[3].innerHTML];
-        tableauProduits[i].Produit(tab[i].childNodes[1].innerHTML, tab[i].childNodes[3].innerHTML, tab[i].childNodes[5].innerHTML, tab[i].childNodes[7].innerHTML, images);
-        contenu+=tableauProduits[i].afficher();
+	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
+    var tableau = tableauProduitsXML.getElementsByTagName("produit");
+	//teste
+	console.log(tableau);
+    var produit="";	
+	////transition des donnes...
+    for (var i = 0; i < tableau.length; i++) 
+	{			
+		//pour chaque indice un nouveau Produit vide...	
+        tableauProduits[i] = new Produit(); 	
+		//cree le tableau avec 2 images 
+        var images = [
+						//ou se retrouve l'image.
+						tableau[i].childNodes[9].childNodes[1].innerHTML,
+						tableau[i].childNodes[9].childNodes[3].innerHTML
+					 ];
+		//peuple les proprietes du Produit vide en fournissant au constructeur les 5 parametres...
+        tableauProduits[i].Produit(
+									tableau[i].childNodes[1].innerHTML,	//id
+									tableau[i].childNodes[3].innerHTML, // categorie
+									tableau[i].childNodes[5].innerHTML, // titre
+									tableau[i].childNodes[7].innerHTML,	// prix
+									images // le tableau d'images
+								   );
+        produit+=tableauProduits[i].afficher();
     }
-    $('#listeProduits').html(contenu);
+    $('#listeProduits').html(produit);
 }
 
 
