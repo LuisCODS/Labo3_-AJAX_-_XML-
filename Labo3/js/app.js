@@ -10,19 +10,24 @@ function Produit() {
 } 
 //Constructeur
 Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
+	//CONSTRUCTEUR PAR DÉFAUT
     if (arguments.length == 0) {
         this.id = null;
-        this.categorie = 3;
+        this.categorie = null;
         this.titre = null;
         this.prix = 0;
         this.images = [];
-    } else if (arguments[0] instanceof Produit) {
+    } 
+	//CONSTRUCTEUR DE COPIE
+	else if (arguments[0] instanceof Produit) {
         this.id = arguments[0].id;
         this.categorie = arguments[0].categorie;
         this.titre = arguments[0].titre;
         this.prix = arguments[0].prix;
         this.images = arguments[0].images;
-    } else {
+    }
+	//CONSTRUCTEUR PARAMÈTRÉ
+	else {
         this.setId(id);
         this.setCategorie(categorie);
         this.setTitre(titre);
@@ -30,14 +35,15 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.setImages(images);
     }
 } 
-// getters et setters
+
+// MÉTHODES «GET» ET «SET»
 Produit.prototype.getId = function () {
     return this.id;
 }
 Produit.prototype.getCategorie = function () {
     return this.categorie;
 }
-Produit.prototype.getTtire = function () {
+Produit.prototype.getTtitre = function () {
     return this.titre;
 }
 Produit.prototype.getPrix = function () {
@@ -61,16 +67,13 @@ Produit.prototype.setPrix = function (prix) {
 Produit.prototype.setImages = function (images) {
         this.images = images;
 }
-//FIN
 
-
-// ===================================== VARIABLES GLOBAUX  =====================================
+//  VARIABLES GLOBAUX  
 var tableauProduitsXML;
-var tableauProduits = new Array();
+var tableauProduits = new Array(); //contien tous les produits
 var panier=[];
-//FIN
 
-// ===================================== METHODES  =====================================
+//  ================= METHODES ================= 
 
 //(step 1) MAIN
 $(document).ready(function () {
@@ -86,6 +89,7 @@ function chargerProuits(){
 		success : function(liste){
 			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
             RemplirTableauProduits();//(step 3)
+			showCatPantalon() ;
             // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
 		fail : function(){
@@ -126,26 +130,32 @@ function RemplirTableauProduits() {
     }
 	//renvois à la DIV le Produit gardé en reference pour l'afficher.
     // $('#listeProduits').html(produitToDisplay);
-	$('#listeProduits').html("<img src='img/produits/homePicture.jpg' class='img-fluid'>");
-	
+	$('#listeProduits').html("<img src='img/produits/homePicture.jpg' height="+1100+" width="+1100+" class='img-fluid'>");	
 }
 
-// Produit.prototype.displayHome = function () {
-    // var contenu = "<div class='col-lg-3 col-md-4'>";
-		// contenu+="<div class='product'>";
-		// contenu+="<div class='flip-container'>";
-		// contenu+="<div class='flipper'>";
-		// contenu+="<div class='front'><a href='detail.html'><img src='+"img/produits/produit_ID_1"+' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		// contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		// contenu+="</div></div>";
-		// contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
-		// contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
-		// contenu+="<p class='price'><del></del>"+this.prix+"</p>";
-		// contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
-		// contenu+="</div></div></div>";
+function showCatPantalon() {
+   var tableau = tableauProduitsXML.getElementsByClassName("pantalon");
+   	console.log(tableau);
+    var produitToDisplay="";	
 
-    // return contenu;
-// }
+    for (var i = 0; i < tableau.length; i++) 
+	{			
+        tableauProduits[i] = new Produit(); 	
+        var images = [
+						tableau[i].childNodes[9].childNodes[1].innerHTML,
+						tableau[i].childNodes[9].childNodes[3].innerHTML
+					 ];
+        tableauProduits[i].Produit(
+									tableau[i].childNodes[1].innerHTML,	//id
+									tableau[i].childNodes[3].innerHTML, // categorie
+									tableau[i].childNodes[5].innerHTML, // titre
+									tableau[i].childNodes[7].innerHTML,	// prix
+									images // le tableau image
+								   );
+        produitToDisplay+=tableauProduits[i].afficher();
+    }
+    $('#pantalons').html(produitToDisplay);
+}
 
 function ajouterAuPanier(id) { 
     if (existe(id)){
@@ -192,9 +202,9 @@ Produit.prototype.afficher = function () {
 		contenu+="<div class='flip-container'>";
 		contenu+="<div class='flipper'>";
 		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a></div>";
 		contenu+="</div></div>";
-		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
+		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a>";
 		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
 		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
 		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
@@ -203,6 +213,24 @@ Produit.prototype.afficher = function () {
     return contenu;
 }
 
+Produit.prototype.showPantalosByCat = function () {
+    var contenu = "<div class='col-lg-3 col-md-4'>";
+		contenu+="<div class='product'>";
+		contenu+="<div class='flip-container'>";
+		contenu+="<div class='flipper'>";
+		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"'  height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="</div></div>";
+		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' height="+200+" width="+200+" alt='"+this.titre+"' class='img-fluid'></a>";
+		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
+		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
+		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
+		contenu+="</div></div></div>";
+
+    return contenu;
+}
+
+// ===================================== FIN - CLASSE PRODUIT =====================================
 
 
 

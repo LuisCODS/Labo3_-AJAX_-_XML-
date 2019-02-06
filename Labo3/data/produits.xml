@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produits>
-
-    <produit categorie="Pantalos">
+	<!-- ================= MODE HOMME ================= -->
+    <produit class="pantalon">
         <id>1</id>
-		<mode>Homme</mode>
-        <titre>Pantalon de jogging à galons</titre>
+		<categorie>Pantalon</categorie>
+        <titre>Pantalon de jogging</titre>
         <prix>25.00</prix>
         <images> 
-            <image>img/produits/produit11.jpg</image>
-            <image>img/produits/produit12.jpg</image>
+            <image>img/produits/pantalons/pantalonID_1.jpg</image>
+            <image>img/produits/pantalons/pantalonID_1_Back.jpg</image>
+        </images>
+    </produit>	
+	 <produit class="pantalon">
+        <id>2</id>
+		<categorie>Pantalon</categorie>
+        <titre>Pantalon jeans</titre>
+        <prix>30.00</prix>
+        <images> 
+            <image>img/produits/pantalons/pantalonJeans1.jpg</image>
+            <image>img/produits/pantalons/pantalonJeans2.jpg</image>
         </images>
     </produit>
+	 <produit class="pantalon">
+        <id>3</id>
+		<categorie>Pantalon</categorie>
+        <titre>Chino en coton Skinny fit</titre>
+        <prix>22.00</prix>
+        <images> 
+            <image>img/produits/pantalons/pantalonChino1.jpg</image>
+            <image>img/produits/pantalons/pantalonChino2.jpg</image>
+        </images>
+    </produit>  
+	 <produit class="chemise">
+        <id>4</id>
+		<categorie>Chemise</categorie>
+        <titre>Chemise Coupe amincie</titre>
+        <prix>18.99</prix>
+        <images> 
+            <image>img/produits/chemises/Chemise1.jpg</image>
+            <image>img/produits/chemises/chemisesCarreau2.jpg</image>
+        </images>
+    </produit>  
+	 <produit class="chemise">
+        <id>5</id>
+		<categorie>Chemise</categorie>
+        <titre>Chemise en jeans</titre>
+        <prix>38.99</prix>
+        <images> 
+            <image>img/produits/chemises/ChemiseJean1.jpg</image>
+            <image>img/produits/chemises/ChemiseJean2.jpg</image>
+        </images>
+    </produit> 	
+	<produit class="chaussure">
+        <id>6</id>
+		<categorie>Chaussure</categorie>
+        <titre>Chaussures de sport en cuir</titre>
+        <prix>88.99</prix>
+        <images> 
+            <image>img/produits/chaussures/Chaussures_ID_6_Back.jpg</image>
+            <image>img/produits/chaussures/Chaussures_ID_6_Back.jpg</image>
+        </images>
+    </produit> 	
+	<produit class="chaussure">
+        <id>7</id>
+		<categorie>Chaussure</categorie>
+        <titre>Bottes chukka</titre>
+        <prix>68.99</prix>
+        <images> 
+            <image>img/produits/chaussures/chukka.jpg</image>
+            <image>img/produits/chaussures/chukka_back.jpg</image>
+        </images>
+    </produit> 	
+	<!-- ================= MODE FEMME ================= -->
 
-    
-</produits>
+</produits>  
