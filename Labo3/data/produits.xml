@@ -1,45 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produits>
 
-    <produit>
+    <produit categorie="Pantalos">
         <id>1</id>
-        <categorie>10000</categorie>
-        <titre>Le nom de la rose</titre>
-        <prix>325</prix>
+		<mode>Homme</mode>
+        <titre>Pantalon de jogging à galons</titre>
+        <prix>25.00</prix>
         <images> 
             <image>img/produits/produit11.jpg</image>
             <image>img/produits/produit12.jpg</image>
         </images>
     </produit>
-    <produit>
-        <id>2</id>
-        <categorie>20000</categorie>
-        <titre>yassine</titre>
-        <prix>152</prix>
-        <images>
-            <image>img/produits/produit21.jpg</image>
-            <image>img/produits/produit22.jpg</image>
-        </images>
-    </produit>
-    <produit>
-        <id>2</id>
-        <categorie>20000</categorie>
-        <titre>yassine</titre>
-        <prix>152</prix>
-        <images>
-            <image>img/produits/produit21.jpg</image>
-            <image>img/produits/produit22.jpg</image>
-        </images>
-    </produit>
-    <produit>
-        <id>2</id>
-        <categorie>20000</categorie>
-        <titre>yassine</titre>
-        <prix>152</prix>
-        <images>
-            <image>img/produits/produit21.jpg</image>
-            <image>img/produits/produit22.jpg</image>
-        </images>
-    </produit>
+
     
 </produits>

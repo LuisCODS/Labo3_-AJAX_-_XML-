@@ -61,36 +61,91 @@ Produit.prototype.setPrix = function (prix) {
 Produit.prototype.setImages = function (images) {
         this.images = images;
 }
-// méthodes
-Produit.prototype.afficher = function () {
-    var contenu = "<div class='col-lg-3 col-md-4'>";
-		contenu+="<div class='product'>";
-		contenu+="<div class='flip-container'>";
-		contenu+="<div class='flipper'>";
-		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="</div></div>";
-		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
-		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
-		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
-		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
-		contenu+="</div></div></div>";
+//FIN
 
-    return contenu;
-}
-// ===================================== FIN - CLASSE PRODUIT  =====================================
 
-//global
+// ===================================== VARIABLES GLOBAUX  =====================================
 var tableauProduitsXML;
 var tableauProduits = new Array();
 var panier=[];
+//FIN
 
-//MAIN
+// ===================================== METHODES  =====================================
+
+//(step 1) MAIN
 $(document).ready(function () {
     chargerProuits();
 });
 
-// ===================================== METHODES  =====================================
+//(step 2)Fait la requête Ajax pour extraire les données provenant du fichier XML
+function chargerProuits(){
+	$.ajax({
+		type:"GET",
+		url:"data/produits.xml",
+		dataType:"xml",
+		success : function(liste){
+			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
+            RemplirTableauProduits();//(step 3)
+            // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
+		},
+		fail : function(){
+			alert("GROS PROBLEME");
+		}
+	});
+}
+
+//(step 3) Remplir un Tableau avec TOUS les Produits: cree un array pour faire la transposition des données importées en Objets<Produit>
+function RemplirTableauProduits() {
+	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
+    var tableau = tableauProduitsXML.getElementsByTagName("produit");
+	//teste
+	console.log(tableau);
+    // var produitToDisplay="";	
+	////transition des donnes...
+    for (var i = 0; i < tableau.length; i++) 
+	{			
+		//pour chaque indice un nouveau Produit vide...	
+        tableauProduits[i] = new Produit(); 	
+		//cree un tableau avec 1 image par indice 
+        var images = [
+						//chemin ou se retrouve l'image.
+						tableau[i].childNodes[9].childNodes[1].innerHTML,
+						tableau[i].childNodes[9].childNodes[3].innerHTML
+					 ];
+		//peuple les proprietes du Produit vide en fournissant a son constructeur les 5 parametres...
+        tableauProduits[i].Produit(
+									tableau[i].childNodes[1].innerHTML,	//id
+									tableau[i].childNodes[3].innerHTML, // categorie
+									tableau[i].childNodes[5].innerHTML, // titre
+									tableau[i].childNodes[7].innerHTML,	// prix
+									images // le tableau image
+								   );
+		//fait appel à la methode afficher() du Produit à l'indice i.
+		//...le retour c'est un Produit en format HTML avec l'ensemble des ses proprietes.
+        // produitToDisplay+=tableauProduits[i].afficher();
+    }
+	//renvois à la DIV le Produit gardé en reference pour l'afficher.
+    // $('#listeProduits').html(produitToDisplay);
+	$('#listeProduits').html("<img src='img/produits/homePicture.jpg' class='img-fluid'>");
+	
+}
+
+// Produit.prototype.displayHome = function () {
+    // var contenu = "<div class='col-lg-3 col-md-4'>";
+		// contenu+="<div class='product'>";
+		// contenu+="<div class='flip-container'>";
+		// contenu+="<div class='flipper'>";
+		// contenu+="<div class='front'><a href='detail.html'><img src='+"img/produits/produit_ID_1"+' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		// contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		// contenu+="</div></div>";
+		// contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
+		// contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
+		// contenu+="<p class='price'><del></del>"+this.prix+"</p>";
+		// contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
+		// contenu+="</div></div></div>";
+
+    // return contenu;
+// }
 
 function ajouterAuPanier(id) { 
     if (existe(id)){
@@ -130,54 +185,23 @@ function produitById(id) {
             return tableauProduits[i]
 }
 
-//Fait la requête Ajax pour extraire les données provenant du fichier XML
-function chargerProuits(){
-	$.ajax({
-		type:"GET",
-		url:"data/produits.xml",
-		dataType:"xml",
-		success : function(liste){
-			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau des Produit)
-            RemplirTableauProduits();
-            $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
-		},
-		fail : function(){
-			alert("GROS PROBLEME");
-		}
-	});
-}
+//Display toutes les proprietes d'un Produit en format HTML
+Produit.prototype.afficher = function () {
+    var contenu = "<div class='col-lg-3 col-md-4'>";
+		contenu+="<div class='product'>";
+		contenu+="<div class='flip-container'>";
+		contenu+="<div class='flipper'>";
+		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="</div></div>";
+		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"' alt='"+this.titre+"' class='img-fluid'></a>";
+		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
+		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
+		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
+		contenu+="</div></div></div>";
 
-// Cree un array pour faire la transformation des données importées en Objets<Produit>
-function RemplirTableauProduits() {
-	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
-    var tableau = tableauProduitsXML.getElementsByTagName("produit");
-	//teste
-	console.log(tableau);
-    var produit="";	
-	////transition des donnes...
-    for (var i = 0; i < tableau.length; i++) 
-	{			
-		//pour chaque indice un nouveau Produit vide...	
-        tableauProduits[i] = new Produit(); 	
-		//cree le tableau avec 2 images 
-        var images = [
-						//ou se retrouve l'image.
-						tableau[i].childNodes[9].childNodes[1].innerHTML,
-						tableau[i].childNodes[9].childNodes[3].innerHTML
-					 ];
-		//peuple les proprietes du Produit vide en fournissant a son constructeur les 5 parametres...
-        tableauProduits[i].Produit(
-									tableau[i].childNodes[1].innerHTML,	//id
-									tableau[i].childNodes[3].innerHTML, // categorie
-									tableau[i].childNodes[5].innerHTML, // titre
-									tableau[i].childNodes[7].innerHTML,	// prix
-									images // le tableau d'images
-								   );
-        produit+=tableauProduits[i].afficher();
-    }
-    $('#listeProduits').html(produit);
+    return contenu;
 }
-
 
 
 
