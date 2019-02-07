@@ -35,63 +35,63 @@
 		 <!-- TOPBAR  -->      
 		<nav class="navbar navbar-expand-lg">
 		  <div class="container">
-				<div id="navigation" class="collapse navbar-collapse">
-					  <ul class="navbar-nav mr-auto">
-							<!-- ACCUEIL -->
-							<li class="nav-item">
-								<a href="index.html" class="nav-link active">Accueil</a>
+			<div id="navigation" class="collapse navbar-collapse">
+				  <ul class="navbar-nav mr-auto">
+						<!-- ACCUEIL -->
+						<li class="nav-item">
+							<a href="index.html" class="nav-link active">Accueil</a>
+						</li>
+						<!-- CATEGORIE -->
+						<li class="nav-item dropdown menu-large">
+						  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
+								Catégories<b class="caret"></b>
+						  </a>
+						  <ul class="dropdown-menu megamenu">
+							<li>
+							 <div class="row">
+								<div class="col-md-6 col-lg-4">
+								  <h5>HOMME</h5>
+									  <ul class="list-unstyled mb-3">
+										<li class="nav-item"><a href="pantalons.html"  onclick="showCatPantalon();"  class="nav-link">Pantalons</a></li>
+										<li class="nav-item"><a href="chemises.html"   onclick="showCatChemises();"  class="nav-link">Chemises</a></li>
+										<li class="nav-item"><a href="chaussures.html" onclick="showCatChaussure();" class="nav-link">Chaussures</a></li>
+									  </ul>
+								</div>
+								<div class="col-md-6 col-lg-4">
+								  <h5>FEMME</h5>
+									  <ul class="list-unstyled mb-3">
+										<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
+										<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
+										<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
+									  </ul>
+								</div>
+								<div class="col-md-6 col-lg-4">
+								  <h5>ENFANT</h5>
+									  <ul class="list-unstyled mb-3">
+										<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
+										<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
+										<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
+									  </ul>
+								</div>
+							 </div>
 							</li>
-							<!-- CATEGORIE -->
-							<li class="nav-item dropdown menu-large">
-							  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
-									Catégories<b class="caret"></b>
-							  </a>
-							  <ul class="dropdown-menu megamenu">
-								<li>
-								 <div class="row">
-									<div class="col-md-6 col-lg-4">
-									  <h5>HOMME</h5>
-										  <ul class="list-unstyled mb-3">
-											<li class="nav-item"><a href="pantalons.html"  onclick="showCatPantalon();" class="nav-link">Pantalons</a></li>
-											<li class="nav-item"><a href="chemises.html"   onclick="showCatChemises();" class="nav-link">Chemises</a></li>
-											<li class="nav-item"><a href="chaussures.html" onclick="showCatChaussure();" class="nav-link">Chaussures</a></li>
-										  </ul>
-									</div>
-									<div class="col-md-6 col-lg-4">
-									  <h5>FEMME</h5>
-										  <ul class="list-unstyled mb-3">
-											<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
-											<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
-											<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
-										  </ul>
-									</div>
-									<div class="col-md-6 col-lg-4">
-									  <h5>ENFANT</h5>
-										  <ul class="list-unstyled mb-3">
-											<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
-											<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
-											<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
-										  </ul>
-									</div>
-								 </div>
-								</li>
-							  </ul>
-							</li>
-							<!-- CONTACT -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">Contact</a>
-							</li>					
-					  </ul>
-					  <!-- PANIER -->
-					  <div class="navbar-buttons d-flex justify-content-end">
-							<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
-								<a href="#" class="btn btn-primary navbar-btn">
-									<i class="fa fa-shopping-cart"></i>
-									<span id="panier"></span>
-								</a>
-							</div>
-					  </div>
-				</div>
+						  </ul>
+						</li>
+						<!-- CONTACT -->
+						<li class="nav-item">
+							<a href="#" class="nav-link">Contact</a>
+						</li>					
+				  </ul>
+				  <!-- PANIER -->
+				  <div class="navbar-buttons d-flex justify-content-end">
+						<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
+							<a href="#" class="btn btn-primary navbar-btn">
+								<i class="fa fa-shopping-cart"></i>
+								<span id="panier"></span>
+							</a>
+						</div>
+				  </div>
+			</div>
 		  </div>
 		</nav>
 	  </header>
@@ -115,65 +115,10 @@
 	  <div id="footer">
 		<div class="container">
 		  <div class="row">
-			<div class="col-lg-3 col-md-6">
-			  <!-- <h4 class="mb-3">Pages</h4> -->
-			  <!-- <ul class="list-unstyled"> -->
-				<!-- <li><a href="text.html">About us</a></li> -->
-				<!-- <li><a href="text.html">Terms and conditions</a></li> -->
-				<!-- <li><a href="faq.html">FAQ</a></li> -->
-				<!-- <li><a href="contact.html">Contact us</a></li> -->
-			  <!-- </ul> -->
-			  <!-- <hr> -->
-			  <!-- <h4 class="mb-3">User section</h4> -->
-			  <!-- <ul class="list-unstyled"> -->
-				<!-- <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li> -->
-				<!-- <li><a href="register.html">Regiter</a></li> -->
-			  <!-- </ul> -->
-			</div>
-			<!-- /.col-lg-3-->
-			<div class="col-lg-3 col-md-6">
-			  <!-- <h4 class="mb-3">Top categories</h4> -->
-			  <!-- <h5>Men</h5> -->
-			  <!-- <ul class="list-unstyled"> -->
-				<!-- <li><a href="category.html">T-shirts</a></li> -->
-				<!-- <li><a href="category.html">Shirts</a></li> -->
-				<!-- <li><a href="category.html">Accessories</a></li> -->
-			  <!-- </ul> -->
-			  <!-- <h5>Ladies</h5> -->
-			  <!-- <ul class="list-unstyled"> -->
-				<!-- <li><a href="category.html">T-shirts</a></li> -->
-				<!-- <li><a href="category.html">Skirts</a></li> -->
-				<!-- <li><a href="category.html">Pants</a></li> -->
-				<!-- <li><a href="category.html">Accessories</a></li> -->
-			  <!-- </ul> -->
-			</div>
-			<!-- /.col-lg-3-->
-			<div class="col-lg-3 col-md-6">
-			  <!-- <h4 class="mb-3">Where to find us</h4> -->
-			  <!-- <p><strong>Obaju Ltd.</strong><br>13/25 New Avenue<br>New Heaven<br>45Y 73J<br>England<br><strong>Great -->
-				  <!-- Britain</strong></p><a href="contact.html">Go to contact page</a> -->
-			  <!-- <hr class="d-block d-md-none"> -->
-			</div>
-			<!-- /.col-lg-3-->
-			<div class="col-lg-3 col-md-6">
-			  <!-- <h4 class="mb-3">Get the news</h4> -->
-			  <!-- <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis -->
-				<!-- egestas.</p> -->
-			  <!-- <form> -->
-				<!-- <div class="input-group"> -->
-				  <!-- <input type="text" class="form-control"><span class="input-group-append"> -->
-					<!-- <button type="button" class="btn btn-outline-secondary">Subscribe!</button></span> -->
-				<!-- </div> -->
-				<!-- /input-group -->
-			  <!-- </form> -->
-			  <!-- <hr> -->
-			  <!-- <h4 class="mb-3">Stay in touch</h4> -->
-			  <!-- <p class="social"><a href="#" class="facebook external"><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i -->
-					<!-- class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a -->
-				  <!-- href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i -->
-					<!-- class="fa fa-envelope"></i></a></p> -->
-			</div>
-			<!-- /.col-lg-3-->
+			<div class="col-lg-3 col-md-6"></div>
+			<div class="col-lg-3 col-md-6"></div>
+			<div class="col-lg-3 col-md-6"></div>
+			<div class="col-lg-3 col-md-6"></div>
 		  </div>
 		</div>
 	  </div>

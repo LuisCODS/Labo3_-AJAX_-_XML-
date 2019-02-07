@@ -38,7 +38,7 @@
         <prix>18.99</prix>
         <images> 
             <image>img/produits/chemises/Chemise1.jpg</image>
-            <image>img/produits/chemises/chemisesCarreau2.jpg</image>
+            <image>img/produits/chemises/Chemise12.jpg</image>
         </images>
     </produit>  
 	 <produit class="chemise">
@@ -50,9 +50,19 @@
             <image>img/produits/chemises/ChemiseJean1.jpg</image>
             <image>img/produits/chemises/ChemiseJean2.jpg</image>
         </images>
-    </produit> 	
-	<produit class="chaussure">
+    </produit> 
+	 <produit class="chemise">
         <id>6</id>
+		<categorie>chemise</categorie>
+        <titre>Chemise en jeans</titre>
+        <prix>38.99</prix>
+        <images> 
+            <image>img/produits/chemises/chemisesCarreau1.jpg</image>
+            <image>img/produits/chemises/chemisesCarreau2.jpg</image>
+        </images>
+    </produit> 		
+	<produit class="chaussure">
+        <id>7</id>
 		<categorie>chaussure</categorie>
         <titre>Chaussures de sport en cuir</titre>
         <prix>88.99</prix>
@@ -62,7 +72,7 @@
         </images>
     </produit> 	
 	<produit class="chaussure">
-        <id>7</id>
+        <id>8</id>
 		<categorie>chaussure</categorie>
         <titre>Bottes chukka</titre>
         <prix>68.99</prix>
@@ -73,5 +83,15 @@
     </produit> 	
 	
 	<!-- ================= MODE FEMME ================= -->
-
+	<produit class="pantalon">
+        <id>9</id>
+		<categorie>pantalon</categorie>
+        <titre>Pantalon-cigarette</titre>
+        <prix>29.99</prix>
+        <images> 
+            <image>img/produits/pantalons/Femme_Id_8.jpg</image>
+            <image>img/produits/pantalons/Femme_Id_8_Close.jpg</image>
+        </images>
+    </produit> 
+	
 </produits>  
