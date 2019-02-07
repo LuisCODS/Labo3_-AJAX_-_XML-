@@ -2,136 +2,136 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Militario</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome CSS-->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-  <!-- Google fonts - Roboto -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
-  <!-- owl carousel-->
-  <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-  <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
-  <!-- theme stylesheet-->
-  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-  <!-- Custom stylesheet - for your changes-->
-  <link rel="stylesheet" href="css/custom.css">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="favicon.png">
-  <!-- Tweaks for older IEs-->
-  <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Militario</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+<!-- Google fonts - Roboto -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
+<!-- owl carousel-->
+<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
+<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="css/custom.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="favicon.png">
+<!-- Tweaks for older IEs-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 
 <body>
-	  <!-- ========================== NAVBAR ========================== -->
-	  <header class="header mb-5">
-		 <!-- TOPBAR  -->      
-		<nav class="navbar navbar-expand-lg">
-		  <div class="container">
-			<div id="navigation" class="collapse navbar-collapse">
-				  <ul class="navbar-nav mr-auto">
-						<!-- ACCUEIL -->
-						<li class="nav-item">
-							<a href="index.html" class="nav-link active">Accueil</a>
-						</li>
-						<!-- CATEGORIE -->
-						<li class="nav-item dropdown menu-large">
-						  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
-								Catégories<b class="caret"></b>
-						  </a>
-						  <ul class="dropdown-menu megamenu">
-							<li>
-							 <div class="row">
-								<div class="col-md-6 col-lg-4">
-								  <h5>HOMME</h5>
-									  <ul class="list-unstyled mb-3">
-										<li class="nav-item"><a href="pantalons.html"  onclick="showCatPantalon();"  class="nav-link">Pantalons</a></li>
-										<li class="nav-item"><a href="chemises.html"   onclick="showCatChemises();"  class="nav-link">Chemises</a></li>
-										<li class="nav-item"><a href="chaussures.html" onclick="showCatChaussure();" class="nav-link">Chaussures</a></li>
-									  </ul>
-								</div>
-								<div class="col-md-6 col-lg-4">
-								  <h5>FEMME</h5>
-									  <ul class="list-unstyled mb-3">
-										<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
-										<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
-										<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
-									  </ul>
-								</div>
-								<div class="col-md-6 col-lg-4">
-								  <h5>ENFANT</h5>
-									  <ul class="list-unstyled mb-3">
-										<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
-										<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
-										<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
-									  </ul>
-								</div>
-							 </div>
-							</li>
-						  </ul>
-						</li>
-						<!-- CONTACT -->
-						<li class="nav-item">
-							<a href="#" class="nav-link">Contact</a>
-						</li>					
-				  </ul>
-				  <!-- PANIER -->
-				  <div class="navbar-buttons d-flex justify-content-end">
-						<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
-							<a href="#" class="btn btn-primary navbar-btn">
-								<i class="fa fa-shopping-cart"></i>
-								<span id="panier"></span>
-							</a>
-						</div>
-				  </div>
-			</div>
-		  </div>
-		</nav>
-	  </header>
-	  
-	 <!-- ========================== CONTENT ========================== -->
-	  <!-- <div id="all"> -->
-		<div id="content">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-lg-12">
-				<h3>Tous les produits</h3><hr>
-				<div id="listeProduits" class="row products">
-				  <!-- Affichage des produits -->
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>	
-		
-	  <!-- ========================== FOOTER ========================== -->
-	  <div id="footer">
-		<div class="container">
-		  <div class="row">
-			<div class="col-lg-3 col-md-6"></div>
-			<div class="col-lg-3 col-md-6"></div>
-			<div class="col-lg-3 col-md-6"></div>
-			<div class="col-lg-3 col-md-6"></div>
-		  </div>
-		</div>
-	  </div>
-	  	  
-	  <!-- JavaScript files-->
-	  <script src="vendor/jquery/jquery.min.js"></script>
-	  <script src="vendor/popper.js/umd/popper.min.js"> </script>
-	  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	  <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-	  <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-	  <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
-	  <script src="https://maps.googleapis.com/maps/api/js"></script>
-	  <script src="js/front.js"></script>
-	  <script src="js/app.js"></script>
+<!-- ========================== NAVBAR ========================== -->
+<header class="header mb-5">
+<!-- TOPBAR  -->      
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<div id="navigation" class="collapse navbar-collapse">
+<ul class="navbar-nav mr-auto">
+<!-- ACCUEIL -->
+<li class="nav-item">
+<a href="index.html" class="nav-link active">Accueil</a>
+</li>
+<!-- CATEGORIE -->
+<li class="nav-item dropdown menu-large">
+<a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
+Catégories<b class="caret"></b>
+</a>
+<ul class="dropdown-menu megamenu">
+<li>
+<div class="row">
+<div class="col-md-6 col-lg-4">
+<h5>HOMME</h5>
+<ul class="list-unstyled mb-3">
+<li class="nav-item"><a href="pantalons.html"  onclick="showCatPantalon();"  class="nav-link">Pantalons</a></li>
+<li class="nav-item"><a href="chemises.html"   onclick="showCatChemises();"  class="nav-link">Chemises</a></li>
+<li class="nav-item"><a href="chaussures.html" onclick="showCatChaussure();" class="nav-link">Chaussures</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-lg-4">
+<h5>FEMME</h5>
+<ul class="list-unstyled mb-3">
+<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
+<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
+<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-lg-4">
+<h5>ENFANT</h5>
+<ul class="list-unstyled mb-3">
+<li class="nav-item"><a href="category.html" class="nav-link">Pantalons</a></li>
+<li class="nav-item"><a href="category.html" class="nav-link">Chemises</a></li>
+<li class="nav-item"><a href="category.html" class="nav-link">Chaussures</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<!-- CONTACT -->
+<li class="nav-item">
+<a href="#" class="nav-link">Contact</a>
+</li>					
+</ul>
+<!-- PANIER -->
+<div class="navbar-buttons d-flex justify-content-end">
+<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
+<a href="#" class="btn btn-primary navbar-btn">
+<i class="fa fa-shopping-cart"></i>
+<span id="panier"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<!-- ========================== CONTENT ========================== -->
+<!-- <div id="all"> -->
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<h3>Tous les produits</h3><hr>
+<div id="listeProduits" class="row products">
+<!-- Affichage des produits -->
+</div>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- ========================== FOOTER ========================== -->
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6"></div>
+<div class="col-lg-3 col-md-6"></div>
+<div class="col-lg-3 col-md-6"></div>
+<div class="col-lg-3 col-md-6"></div>
+</div>
+</div>
+</div>
+
+<!-- JavaScript files-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper.js/umd/popper.min.js"> </script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="js/front.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
