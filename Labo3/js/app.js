@@ -1,5 +1,5 @@
 
-// ===================================== DEBUT - CLASSE PRODUIT =====================================
+// ========================= DEBUT - CLASSE PRODUIT ==============================
 //Classe
 function Produit() {
     this.id;
@@ -101,24 +101,23 @@ function chargerProuits(){
 }
 */
 //(step 2)Fait la requête Ajax pour extraire les données provenant du fichier XML
-function chargerProuits()
-{
-$.ajax({
-  method: "GET",
-  url: "data/produits.xml",
-  dataType:"xml", 
-})
-  .done(function(  ) {
-	tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
-	RemplirTableauProduits();//(step 3)
-	showCatPantalon();//(step 4)
-	showCatChaussure();//(step 5)
-	showCatChemises();//(step 6)
-	$("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
-  }),
-    .fail(function(msn) {
-    alert( "error "+msn );
-  })
+function chargerProuits(){
+	$.ajax({
+		type:"GET",
+		url:"data/produits.xml",
+		dataType:"xml",
+		success : function(liste){
+			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
+            RemplirTableauProduits();//(step 3)
+			showCatPantalon();//(step 4)
+			showCatChaussure();//(step 5)
+			showCatChemises();//(step 6)
+            // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
+		},
+		fail : function(){
+			alert("GROS PROBLEME");
+		}
+	});
 }
 
 //(step 3) Remplir un Tableau avec TOUS les Produits: cree un array pour faire la transposition des données importées en Objets<Produit>
