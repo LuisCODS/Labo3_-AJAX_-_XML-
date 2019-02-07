@@ -89,7 +89,9 @@ function chargerProuits(){
 		success : function(liste){
 			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
             RemplirTableauProduits();//(step 3)
-			showCatPantalon() ;
+			showCatPantalon();//(step 4)
+			showCatChaussure();//(step 5)
+			showCatChemises();//(step 6)
             // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
 		fail : function(){
@@ -102,21 +104,20 @@ function chargerProuits(){
 function RemplirTableauProduits() {
 	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
     var tableau = tableauProduitsXML.getElementsByTagName("produit");
-	//teste
-	console.log(tableau);
-    // var produitToDisplay="";	
+	// console.log(tableau);
+    var produitToDisplay="";	
 	////transition des donnes...
     for (var i = 0; i < tableau.length; i++) 
 	{			
-		//pour chaque indice un nouveau Produit vide...	
+		//referencie un Produit pour chaque indice du tableau	
         tableauProduits[i] = new Produit(); 	
-		//cree un tableau avec 1 image par indice 
+		// le tableau image 
         var images = [
 						//chemin ou se retrouve l'image.
 						tableau[i].childNodes[9].childNodes[1].innerHTML,
 						tableau[i].childNodes[9].childNodes[3].innerHTML
 					 ];
-		//peuple les proprietes du Produit vide en fournissant a son constructeur les 5 parametres...
+		//peuple les proprietes du Produit en lui fournissant au constructeur les 5 parametres...
         tableauProduits[i].Produit(
 									tableau[i].childNodes[1].innerHTML,	//id
 									tableau[i].childNodes[3].innerHTML, // categorie
@@ -126,35 +127,50 @@ function RemplirTableauProduits() {
 								   );
 		//fait appel à la methode afficher() du Produit à l'indice i.
 		//...le retour c'est un Produit en format HTML avec l'ensemble des ses proprietes.
-        // produitToDisplay+=tableauProduits[i].afficher();
-    }
-	//renvois à la DIV le Produit gardé en reference pour l'afficher.
-    // $('#listeProduits').html(produitToDisplay);
-	$('#listeProduits').html("<img src='img/produits/homePicture.jpg' height="+1100+" width="+1100+" class='img-fluid'>");	
-}
-
-function showCatPantalon() {
-   var tableau = tableauProduitsXML.getElementsByClassName("pantalon");
-   	console.log(tableau);
-    var produitToDisplay="";	
-
-    for (var i = 0; i < tableau.length; i++) 
-	{			
-        tableauProduits[i] = new Produit(); 	
-        var images = [
-						tableau[i].childNodes[9].childNodes[1].innerHTML,
-						tableau[i].childNodes[9].childNodes[3].innerHTML
-					 ];
-        tableauProduits[i].Produit(
-									tableau[i].childNodes[1].innerHTML,	//id
-									tableau[i].childNodes[3].innerHTML, // categorie
-									tableau[i].childNodes[5].innerHTML, // titre
-									tableau[i].childNodes[7].innerHTML,	// prix
-									images // le tableau image
-								   );
         produitToDisplay+=tableauProduits[i].afficher();
     }
+	//renvois à la DIV le Produit gardé en reference pour l'afficher.
+    $('#listeProduits').html(produitToDisplay);
+	// $('#listeProduits').html("<img src='img/produits/homePicture.jpg' height="+1100+" width="+1100+" class='img-fluid'>");	
+}
+
+//Affiche les produit de la categorie pantalon
+function showCatPantalon() {
+   	// console.log(tableauProduits);//test
+    var produitToDisplay="";	
+
+    for (var i = 0; i < tableauProduits.length; i++) 
+	{		
+		if(tableauProduits[i].categorie == "Pantalon")
+			produitToDisplay+=tableauProduits[i].afficher();
+    }
     $('#pantalons').html(produitToDisplay);
+}
+
+//Affiche les produit de la categorie chaussures
+function showCatChaussure() {
+   	console.log(tableauProduits);//test
+    var produitToDisplay="";	
+
+    for (var i = 0; i < tableauProduits.length; i++) 
+	{		
+		if(tableauProduits[i].categorie == "chaussure")
+			produitToDisplay+=tableauProduits[i].afficher();
+    }
+    $('#chaussures').html(produitToDisplay);
+}
+
+//Affiche les produit de la categorie chemise
+function showCatChemises() {
+   	console.log(tableauProduits);//test
+    var produitToDisplay="";	
+
+    for (var i = 0; i < tableauProduits.length; i++) 
+	{		
+		if(tableauProduits[i].categorie == "chemise")
+			produitToDisplay+=tableauProduits[i].afficher();
+    }
+    $('#chemise').html(produitToDisplay);
 }
 
 function ajouterAuPanier(id) { 
@@ -169,8 +185,9 @@ function ajouterAuPanier(id) {
     console.log(panier);
  }
  
+ // Verifie si un produit existe
 function existe(id) { 
-    if (panier.length>0)
+    if (panier.length > 0)
         for (var i = 0; i < panier.length; i++)
             if (panier[i].id==id)
                 return true;
@@ -190,6 +207,7 @@ function zonePanier() {
 }
 
 function produitById(id) {
+	
     for (var i in tableauProduits)
         if (parseInt(tableauProduits[i].id,10)==id)
             return tableauProduits[i]
@@ -214,9 +232,6 @@ Produit.prototype.afficher = function () {
 }
 
 // ===================================== FIN - CLASSE PRODUIT =====================================
-
-
-
 
 
 

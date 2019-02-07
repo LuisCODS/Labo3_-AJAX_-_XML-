@@ -33,7 +33,7 @@
     </produit>  
 	 <produit class="chemise">
         <id>4</id>
-		<categorie>Chemise</categorie>
+		<categorie>chemise</categorie>
         <titre>Chemise Coupe amincie</titre>
         <prix>18.99</prix>
         <images> 
@@ -43,7 +43,7 @@
     </produit>  
 	 <produit class="chemise">
         <id>5</id>
-		<categorie>Chemise</categorie>
+		<categorie>chemise</categorie>
         <titre>Chemise en jeans</titre>
         <prix>38.99</prix>
         <images> 
@@ -53,7 +53,7 @@
     </produit> 	
 	<produit class="chaussure">
         <id>6</id>
-		<categorie>Chaussure</categorie>
+		<categorie>chaussure</categorie>
         <titre>Chaussures de sport en cuir</titre>
         <prix>88.99</prix>
         <images> 
@@ -63,7 +63,7 @@
     </produit> 	
 	<produit class="chaussure">
         <id>7</id>
-		<categorie>Chaussure</categorie>
+		<categorie>chaussure</categorie>
         <titre>Bottes chukka</titre>
         <prix>68.99</prix>
         <images> 
@@ -71,6 +71,7 @@
             <image>img/produits/chaussures/chukka_back.jpg</image>
         </images>
     </produit> 	
+	
 	<!-- ================= MODE FEMME ================= -->
 
 </produits>  
