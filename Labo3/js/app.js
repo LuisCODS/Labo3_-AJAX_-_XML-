@@ -1,6 +1,10 @@
-
-// ========================= DEBUT - CLASSE PRODUIT ==============================
-//Classe
+/*
+*
+* ======================================================================
+* 				DEBUT - CLASSE PRODUIT
+* ======================================================================
+*
+*/
 function Produit() {
     this.id;
     this.categorie;
@@ -8,9 +12,11 @@ function Produit() {
     this.prix;
     this.images=[];
 } 
-//Constructeur
+// ------------------------------------------------------ //
+// Constructeur
+// ------------------------------------------------------ //
 Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
-	//CONSTRUCTEUR PAR DÉFAUT
+	//... PAR DÉFAUT
     if (arguments.length == 0) {
         this.id = null;
         this.categorie = null;
@@ -18,7 +24,7 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.prix = 0;
         this.images = [];
     } 
-	//CONSTRUCTEUR DE COPIE
+	//...PAR  COPIE
 	else if (arguments[0] instanceof Produit) {
         this.id = arguments[0].id;
         this.categorie = arguments[0].categorie;
@@ -26,7 +32,7 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.prix = arguments[0].prix;
         this.images = arguments[0].images;
     }
-	//CONSTRUCTEUR PARAMÈTRÉ
+	//...PAR PARAMÈTRÉ
 	else {
         this.setId(id);
         this.setCategorie(categorie);
@@ -35,8 +41,9 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.setImages(images);
     }
 } 
-
+// ------------------------------------------------------ //
 // MÉTHODES «GET» ET «SET»
+// ------------------------------------------------------ //
 Produit.prototype.getId = function () {
     return this.id;
 }
@@ -67,39 +74,21 @@ Produit.prototype.setPrix = function (prix) {
 Produit.prototype.setImages = function (images) {
         this.images = images;
 }
-
-//  VARIABLES GLOBAUX  
+// ------------------------------------------------------ //
+// VARIABLES GLOBAUX
+// ------------------------------------------------------ // 
 var tableauProduitsXML;
 var tableauProduits = new Array(); //contien tous les produits
 var panier=[];
 
-//  ================= METHODES ================= 
-
+// ------------------------------------------------------ //
+// METHODES
+// ------------------------------------------------------ //
 //(step 1) MAIN
 $(document).ready(function () {
     chargerProuits();
 });
-/*
-//(step 2)Fait la requête Ajax pour extraire les données provenant du fichier XML
-function chargerProuits(){
-	$.ajax({
-		type:"GET",
-		url:"data/produits.xml",
-		dataType:"xml",
-		success : function(liste){
-			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
-            RemplirTableauProduits();//(step 3)
-			showCatPantalon();//(step 4)
-			showCatChaussure();//(step 5)
-			showCatChemises();//(step 6)
-            // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
-		},
-		fail : function(){
-			alert("GROS PROBLEME");
-		}
-	});
-}
-*/
+
 //(step 2)Fait la requête Ajax pour extraire les données provenant du fichier XML
 function chargerProuits(){
 	$.ajax({
