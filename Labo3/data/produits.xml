@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produits>
 	<!-- ================= MODE HOMME ================= -->
-    <produit class="pantalon">
+     <produit class="Pantalon">
         <id>1</id>
-		<categorie>Pantalon</categorie>
+		<categorie>Homme</categorie>
         <titre>Pantalon de jogging</titre>
         <prix>25.00</prix>
         <images> 
             <image>img/produits/pantalons/pantalonID_1.jpg</image>
             <image>img/produits/pantalons/pantalonID_1_Back.jpg</image>
         </images>
+		<genre>25.00</genre>
     </produit>	
-	 <produit class="pantalon">
+	 <produit class="Pantalon">
         <id>2</id>
-		<categorie>Pantalon</categorie>
+		<categorie>Homme</categorie>
         <titre>Pantalon jeans</titre>
         <prix>30.00</prix>
         <images> 
@@ -21,9 +22,9 @@
             <image>img/produits/pantalons/pantalonJeans2.jpg</image>
         </images>
     </produit>
-	 <produit class="pantalon">
+	 <produit class="Pantalon">
         <id>3</id>
-		<categorie>Pantalon</categorie>
+		<categorie>Homme</categorie>
         <titre>Chino en coton Skinny fit</titre>
         <prix>22.00</prix>
         <images> 
@@ -31,9 +32,9 @@
             <image>img/produits/pantalons/pantalonChino2.jpg</image>
         </images>
     </produit>  
-	 <produit class="chemise">
+	 <produit class="Chemise">
         <id>4</id>
-		<categorie>chemise</categorie>
+		<categorie>Homme</categorie>
         <titre>Chemise Coupe amincie</titre>
         <prix>18.99</prix>
         <images> 
@@ -41,9 +42,9 @@
             <image>img/produits/chemises/Chemise12.jpg</image>
         </images>
     </produit>  
-	 <produit class="chemise">
+	 <produit class="Chemise">
         <id>5</id>
-		<categorie>chemise</categorie>
+		<categorie>Homme</categorie>
         <titre>Chemise en jeans</titre>
         <prix>38.99</prix>
         <images> 
@@ -51,9 +52,9 @@
             <image>img/produits/chemises/ChemiseJean2.jpg</image>
         </images>
     </produit> 
-	 <produit class="chemise">
+	 <produit class="Chemise">
         <id>6</id>
-		<categorie>chemise</categorie>
+		<categorie>Homme</categorie>
         <titre>Chemise en jeans</titre>
         <prix>38.99</prix>
         <images> 
@@ -61,9 +62,9 @@
             <image>img/produits/chemises/chemisesCarreau2.jpg</image>
         </images>
     </produit> 		
-	<produit class="chaussure">
+	<produit class="Chaussure">
         <id>7</id>
-		<categorie>chaussure</categorie>
+		<categorie>Homme</categorie>
         <titre>Chaussures de sport en cuir</titre>
         <prix>88.99</prix>
         <images> 
@@ -71,9 +72,9 @@
             <image>img/produits/chaussures/Chaussures_ID_6_Back.jpg</image>
         </images>
     </produit> 	
-	<produit class="chaussure">
+	<produit class="Chaussure">
         <id>8</id>
-		<categorie>chaussure</categorie>
+		<categorie>Homme</categorie>
         <titre>Bottes chukka</titre>
         <prix>68.99</prix>
         <images> 
@@ -81,11 +82,10 @@
             <image>img/produits/chaussures/chukka_back.jpg</image>
         </images>
     </produit> 	
-	
 	<!-- ================= MODE FEMME ================= -->
-	<produit class="pantalon">
-        <id>9</id>
-		<categorie>pantalon</categorie>
+	<produit class="Pantalon">
+        <id>100</id>
+		<categorie>Femme</categorie>
         <titre>Pantalon-cigarette</titre>
         <prix>29.99</prix>
         <images> 
@@ -93,5 +93,85 @@
             <image>img/produits/pantalons/Femme_Id_8_Close.jpg</image>
         </images>
     </produit> 
-	
+	<produit class="Chemise">
+        <id>101</id>
+		<categorie>Femme</categorie>
+        <titre>Chandail en maille fine</titre>
+        <prix>5.00</prix>
+        <images> 
+            <image>img/produits/chemises/femme100-1.jpg</image>
+            <image>img/produits/chemises/femme100-2.jpg</image>
+        </images>
+    </produit> 
+	<produit class="Chaussure">
+        <id>102</id>
+		<categorie>Femme</categorie>
+        <titre>Chaussures de sport</titre>
+        <prix>30.00</prix>
+        <images> 
+            <image>img/produits/chaussures/femme102-1.jpg</image>
+            <image>img/produits/chaussures/femme102-2.jpg</image>
+        </images>
+    </produit>
+	<produit class="Chaussure">
+        <id>103</id>
+		<categorie>Femme</categorie>
+        <titre>Chaussures sport sans lacets</titre>
+        <prix>25.00</prix>
+        <images> 
+            <image>img/produits/chaussures/femme103-1.jpg</image>
+            <image>img/produits/chaussures/femme103-2.jpg</image>
+        </images>
+    </produit>	
+	<produit class="Pantalon">
+        <id>104</id>
+		<categorie>Femme</categorie>
+        <titre>Pantalon taille froncée</titre>
+        <prix>19.99</prix>
+        <images> 
+            <image>img/produits/pantalons/femme104-1.jpg</image>
+            <image>img/produits/pantalons/femme104-2.jpg</image>
+        </images>
+    </produit> 
+		<!-- ================= MODE KID ================= -->
+	<produit class="Pantalon">
+        <id>300</id>
+		<categorie>Kid</categorie>
+        <titre>Jean Taille ajustée</titre>
+        <prix>15.00</prix>
+        <images> 
+            <image>img/produits/pantalons/hmgoepprod.jpg</image>
+            <image>img/produits/pantalons/hmgoepprod2.jpg</image>
+        </images>
+    </produit> 
+	<produit class="Pantalon">
+        <id>301</id>
+		<categorie>Kid</categorie>
+        <titre>Pantalon ultra-moulant denim</titre>
+        <prix>20.00</prix>
+        <images> 
+            <image>img/produits/pantalons/deniKids1.jpg</image>
+            <image>img/produits/pantalons/deniKids2.jpg</image>
+        </images>
+    </produit> 
+	<produit class="Chemise">
+        <id>302</id>
+		<categorie>Kid</categorie>
+        <titre>T-shirt avec impression</titre>
+        <prix>10.00</prix>
+        <images> 
+            <image>img/produits/chemises/kids01.jpg</image>
+            <image>img/produits/chemises/kids02.jpg</image>
+        </images>
+    </produit> 
+	<produit class="Chaussure">
+        <id>303</id>
+		<categorie>Kid</categorie>
+        <titre>Chaussures de sport en toile</titre>
+        <prix>30.99</prix>
+        <images> 
+            <image>img/produits/chaussures/kid100.jpg</image>
+            <image>img/produits/chaussures/kid200.jpg</image>
+        </images>
+    </produit> 	
 </produits>  

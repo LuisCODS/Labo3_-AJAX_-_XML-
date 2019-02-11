@@ -12,9 +12,9 @@ function Produit() {
     this.prix;
     this.images=[];
 } 
-// ------------------------------------------------------ //
-// Constructeur
-// ------------------------------------------------------ //
+//
+//Constructeur
+// 
 Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
 	//... PAR DÉFAUT
     if (arguments.length == 0) {
@@ -41,9 +41,9 @@ Produit.prototype.Produit = function (id, categorie, titre, prix, images) {
         this.setImages(images);
     }
 } 
-// ------------------------------------------------------ //
-// MÉTHODES «GET» ET «SET»
-// ------------------------------------------------------ //
+// 
+// 			MÉTHODES «GET» ET «SET»
+// 
 Produit.prototype.getId = function () {
     return this.id;
 }
@@ -74,33 +74,59 @@ Produit.prototype.setPrix = function (prix) {
 Produit.prototype.setImages = function (images) {
         this.images = images;
 }
-// ------------------------------------------------------ //
-// VARIABLES GLOBAUX
-// ------------------------------------------------------ // 
+// 
+//			 VARIABLES GLOBAUX
+//  
 var tableauProduitsXML;
 var tableauProduits = new Array(); //contien tous les produits
 var panier=[];
+ 
+/*
+ *METHODE: Display toutes les proprietes d'un Produit en format HTML
+*/
+Produit.prototype.afficher = function () {
+    var contenu = "<div class='col-lg-3 col-md-4'>";
+		contenu+="<div class='product'>";
+		contenu+="<div class='flip-container'>";
+		contenu+="<div class='flipper'>";
+		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a></div>";
+		contenu+="</div></div>";
+		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a>";
+		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
+		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
+		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
+		contenu+="</div></div></div>";
 
-// ------------------------------------------------------ //
-// METHODES
-// ------------------------------------------------------ //
-//(step 1) MAIN
+    return contenu;
+}
+/*
+*
+* ======================================================================
+* 				FIN - CLASSE PRODUIT 
+* ======================================================================
+*
+*/
+
+ 
+  
+/*
+* MAIN
+*/
 $(document).ready(function () {
-    chargerProuits();
+    chargerProduits();
 });
-
-//(step 2)Fait la requête Ajax pour extraire les données provenant du fichier XML
-function chargerProuits(){
+/*
+* METHODE: Fait la requête Ajax pour extraire les données provenant du fichier XML
+*/
+function chargerProduits(){
 	$.ajax({
 		type:"GET",
 		url:"data/produits.xml",
 		dataType:"xml",
 		success : function(liste){
 			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
-            RemplirTableauProduits();//(step 3)
-			showCatPantalon();//(step 4)
-			showCatChaussure();//(step 5)
-			showCatChemises();//(step 6)
+            RemplirTableauProduits();
             // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
 		fail : function(){
@@ -108,14 +134,15 @@ function chargerProuits(){
 		}
 	});
 }
-
-//(step 3) Remplir un Tableau avec TOUS les Produits: cree un array pour faire la transposition des données importées en Objets<Produit>
+/*
+* METHODE: Remplir un Tableau avec TOUS les Produits: cree un array 
+* ...pour faire la transposition des données importées en Objets<Produit>
+*/
 function RemplirTableauProduits() {
 	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
     var tableau = tableauProduitsXML.getElementsByTagName("produit");
-	// console.log(tableau);
     var produitToDisplay="";	
-	////transition des donnes...
+	
     for (var i = 0; i < tableau.length; i++) 
 	{			
 		//referencie un Produit pour chaque indice du tableau	
@@ -143,45 +170,74 @@ function RemplirTableauProduits() {
 	// $('#listeProduits').html("<img src='img/produits/homePicture.jpg' height="+1100+" width="+1100+" class='img-fluid'>");	
 }
 
-//Affiche les produit de la categorie pantalon
-function showCatPantalon() {
-   	// console.log(tableauProduits);//test
-    var produitToDisplay="";	
-
-    for (var i = 0; i < tableauProduits.length; i++) 
-	{		
-		if(tableauProduits[i].categorie == "Pantalon")
+/*
+ * METHODE: Affiche les produit de la categorie homme*
+*/
+function showProduistHomme(tag) {
+	
+	var textLien = tag.innerHTML;
+	var tableau = tableauProduitsXML.getElementsByTagName("produit");
+    var produitToDisplay="";
+	var produitName =	"";
+	var genre='';
+	
+    for (var i = 0; i < tableau.length; i++) 
+	{	
+		 produitName = tableau[i].getAttribute("class");
+		 genre 	     =  tableau[i].getElementsByTagName("categorie")[0].firstChild.nodeValue;
+		 
+		if(produitName == textLien && genre == "Homme")
 			produitToDisplay+=tableauProduits[i].afficher();
     }
-    $('#pantalons').html(produitToDisplay);
+    $('#listeProduits').html(produitToDisplay);
 }
-
-//Affiche les produit de la categorie chaussures
-function showCatChaussure() {
-   	console.log(tableauProduits);//test
-    var produitToDisplay="";	
-
-    for (var i = 0; i < tableauProduits.length; i++) 
-	{		
-		if(tableauProduits[i].categorie == "chaussure")
+/*
+ * METHODE: Affiche les produit de la categorie Femme*
+*/
+function showProduitFemme(tag) {
+	
+	var textLien = tag.innerHTML;
+	var tableau = tableauProduitsXML.getElementsByTagName("produit");
+    var produitToDisplay="";
+	var produitName =	"";
+	var genre='';
+	
+    for (var i = 0; i < tableau.length; i++) 
+	{	
+		 produitName = tableau[i].getAttribute("class");
+		 genre 	     =  tableau[i].getElementsByTagName("categorie")[0].firstChild.nodeValue;
+		 
+		if(produitName == textLien && genre == "Femme")
 			produitToDisplay+=tableauProduits[i].afficher();
     }
-    $('#chaussures').html(produitToDisplay);
+    $('#listeProduits').html(produitToDisplay);
+
 }
-
-//Affiche les produit de la categorie chemise
-function showCatChemises() {
-   	console.log(tableauProduits);//test
-    var produitToDisplay="";	
-
-    for (var i = 0; i < tableauProduits.length; i++) 
-	{		
-		if(tableauProduits[i].categorie == "chemise")
+/*
+ * METHODE: Affiche les produit de la categorie kid*
+*/
+function showProduitsKid(tag) {
+	
+	var textLien = tag.innerHTML;
+	var tableau = tableauProduitsXML.getElementsByTagName("produit");
+    var produitToDisplay="";
+	var produitName =	"";
+	var genre='';
+	
+    for (var i = 0; i < tableau.length; i++) 
+	{	
+		 produitName = tableau[i].getAttribute("class");
+		 genre 	     =  tableau[i].getElementsByTagName("categorie")[0].firstChild.nodeValue;
+		 
+		if(produitName == textLien && genre == "Kid")
 			produitToDisplay+=tableauProduits[i].afficher();
     }
-    $('#chemise').html(produitToDisplay);
+    $('#listeProduits').html(produitToDisplay);
 }
 
+/*
+ * METHODE: ajoute les article au Panier
+*/
 function ajouterAuPanier(id) { 
     if (existe(id)){
         for (var i = 0; i < panier.length; i++)
@@ -193,8 +249,9 @@ function ajouterAuPanier(id) {
     zonePanier();
     console.log(panier);
  }
- 
- // Verifie si un produit existe
+/*
+ * METHODE: Verifie si un produit existe
+*/
 function existe(id) { 
     if (panier.length > 0)
         for (var i = 0; i < panier.length; i++)
@@ -202,7 +259,9 @@ function existe(id) {
                 return true;
        return false;
 }
-
+/*
+ *METHODE:
+*/
 function zonePanier() {
     var prixTotal=0, nbrProduits=0;
     if (panier.length>0) {
@@ -214,7 +273,9 @@ function zonePanier() {
     }
     $('#panier').html("("+nbrProduits+") " +prixTotal+" $");
 }
-
+/*
+ *METHODE:
+*/
 function produitById(id) {
 	
     for (var i in tableauProduits)
@@ -222,25 +283,6 @@ function produitById(id) {
             return tableauProduits[i]
 }
 
-//Display toutes les proprietes d'un Produit en format HTML
-Produit.prototype.afficher = function () {
-    var contenu = "<div class='col-lg-3 col-md-4'>";
-		contenu+="<div class='product'>";
-		contenu+="<div class='flip-container'>";
-		contenu+="<div class='flipper'>";
-		contenu+="<div class='front'><a href='detail.html'><img src='"+this.images[0]+"' alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="<div class='back'><a href='detail.html'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a></div>";
-		contenu+="</div></div>";
-		contenu+="<a href='#' class='invisible'><img src='"+this.images[1]+"'  alt='"+this.titre+"' class='img-fluid'></a>";
-		contenu+="<div class='text'> <h3><a href='#'>"+this.titre+"</a></h3>";
-		contenu+="<p class='price'><del></del>"+this.prix+"</p>";
-		contenu+="<p onclick='ajouterAuPanier("+this.id+")' class='buttons'><a href='#' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Ajouter au panier</a></p>";
-		contenu+="</div></div></div>";
-
-    return contenu;
-}
-
-// ===================================== FIN - CLASSE PRODUIT =====================================
 
 
 
