@@ -31,81 +31,112 @@
 
 <body>
 	<!-- ========================== NAVBAR ========================== -->
-	<header class="header mb-5">
-	<!-- TOPBAR  -->      
-	<nav class="navbar navbar-expand-lg">
-		<div class="container">
-			<div id="navigation" class="collapse navbar-collapse">
-				<ul class="navbar-nav mr-auto">
-					<!-- ACCUEIL -->
-					<li class="nav-item">
-					<a href="index.html" class="nav-link active">Accueil</a>
-					</li>
-					<!-- CATEGORIE -->
-					<li class="nav-item dropdown menu-large">
-						<a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
-						Catégories<b class="caret"></b>
-						</a>
-						<ul class="dropdown-menu megamenu">
-						<!-- <li>		onclick="showCatPantalon();"  -->
-						<div  class="row">
-						<div class="col-md-6 col-lg-4">
-							<h5>HOMME</h5>
-							<ul class="list-unstyled mb-3">
-							<li class="nav-item"><a id="hommePantalon" href="#" onclick="showProduistHomme(this);"  class="nav-link">Pantalon</a></li>
-							<li class="nav-item"><a id="hommeChemise"  href="#" onclick="showProduistHomme(this);"  class="nav-link">Chemise</a></li>
-							<li class="nav-item"><a id="hommeChaussure" href="#" onclick="showProduistHomme(this);" class="nav-link">Chaussure</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6 col-lg-4">
-						<h5>FEMME</h5>
-							<ul class="list-unstyled mb-3">
-							<li class="nav-item"><a id="femmePantalon"  href="#" onclick="showProduitFemme(this);"  class="nav-link">Pantalon</a></li>
-							<li class="nav-item"><a id="femmeChemise"   href="#" onclick="showProduitFemme(this);"  class="nav-link">Chemise</a></li>
-							<li class="nav-item"><a id="femmeChaussure" href="#" onclick="showProduitFemme(this);"  class="nav-link">Chaussure</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6 col-lg-4">
-							<h5>ENFANT</h5>
-							<ul class="list-unstyled mb-3">
-							<li class="nav-item"><a id="kidPantalon"  href="#" onclick="showProduitsKid(this);"  class="nav-link">Pantalon</a></li>
-							<li class="nav-item"><a id="kidChemise"   href="#" onclick="showProduitsKid(this);"  class="nav-link">Chemise</a></li>
-							<li class="nav-item"><a id="kidChaussure" href="#" onclick="showProduitsKid(this);"  class="nav-link">Chaussure</a></li>
-							</ul>
-						</div>
-						</div>
-					</li>
+<header class="header mb-5">
+<!-- TOPBAR  -->      
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+	<div id="navigation" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">			
+			<!-- ACCUEIL -->
+			<li class="nav-item">
+				<a href='#' onclick="loadExternePage('index.html');"   class="nav-link active">Accueil</a>
+			</li>		
+			<!-- CATEGORIE -->
+			<li class="nav-item dropdown menu-large">
+				<a href="javascript::" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">
+				Catégories<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu megamenu">
+				<div  class="row">
+					<div class="col-md-6 col-lg-4">
+					<h5>HOMME</h5>
+					<ul class="list-unstyled mb-3">
+					<li class="nav-item"><a id="hommePantalon" href='#' onclick="showProduistHomme(this);"  class="nav-link">Pantalon</a></li>
+					<li class="nav-item"><a id="hommeChemise"  href='#' onclick="showProduistHomme(this);"  class="nav-link">Chemise</a></li>
+					<li class="nav-item"><a id="hommeChaussure" href='#' onclick="showProduistHomme(this);" class="nav-link">Chaussure</a></li>
 					</ul>
-					</li>
-					<!-- CONTACT -->
-					<li class="nav-item">
-					<a href="#" class="nav-link">Contact</a>
-					</li>					
-				</ul>
-				<!-- PANIER -->
-				<div class="navbar-buttons d-flex justify-content-end">
-					<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
-						<a href="#" class="btn btn-primary navbar-btn">
-							<i class="fa fa-shopping-cart"></i>
-							<span id="panier"></span>
-						</a>
+					</div>
+					<div class="col-md-6 col-lg-4">
+					<h5>FEMME</h5>
+					<ul class="list-unstyled mb-3">
+					<li class="nav-item"><a id="femmePantalon"  href='#' onclick="showProduitFemme(this);"  class="nav-link">Pantalon</a></li>
+					<li class="nav-item"><a id="femmeChemise"  href='#' onclick="showProduitFemme(this);"  class="nav-link">Chemise</a></li>
+					<li class="nav-item"><a id="femmeChaussure" href='#' onclick="showProduitFemme(this);"  class="nav-link">Chaussure</a></li>
+					</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+					<h5>ENFANT</h5>
+					<ul class="list-unstyled mb-3">
+					<li class="nav-item"><a id="kidPantalon" href='#' onclick="showProduitsKid(this);"  class="nav-link">Pantalon</a></li>
+					<li class="nav-item"><a id="kidChemise"   href='#' onclick="showProduitsKid(this);"  class="nav-link">Chemise</a></li>
+					<li class="nav-item"><a id="kidChaussure" href='#'onclick="showProduitsKid(this);"  class="nav-link">Chaussure</a></li>
+					</ul>
 					</div>
 				</div>
+				</ul>
+			</li>			
+			<!-- CONTACT -->
+			<li class="nav-item">
+				<a href='#' onclick="loadExternePage('contactTest.html');"  class="nav-link">Contact</a>
+			</li>					
+		</ul>
+		<!-- PANIER -->
+		<div class="navbar-buttons d-flex justify-content-end">
+			<div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block">
+				<a href="#" class="btn btn-primary navbar-btn">
+				<i class="fa fa-shopping-cart"></i>
+				<span id="panier"></span>
+				</a>
 			</div>
 		</div>
-	</nav>
+	</div>
+</div>
+</nav>
 </header>
 
 <!-- ========================== CONTENT ========================== -->
-<!-- <div id="all"> -->
 <div id="content">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<!-- <h3>Tous les produits</h3><hr> -->
-				<div id="listeProduits" class="row products">
+			<!-- Affichage quantité produit -->
+			<!-- <div id="affichageZone" class="box info-bar"> -->
+			  <!-- <div class="row"> -->
+				<!-- <div id="nbrProduits" class="col-md-12 col-lg-4 products-showing">Affichage de <strong>11</strong> produits dans le catalogue</div> -->
+			  <!-- </div> -->
+			<!-- </div> -->
+			
 				<!-- Affichage des produits -->
+				<div id="listeProduits" class="row products">
+				
+					<!-- Produits 1 ...-->
+					<!-- <div class="col-lg-3 col-md-4"> -->
+						<!-- <div class="product"> -->
+							<!-- <div class="flip-container"> -->
+								<!-- <div class="flipper"> -->
+									<!-- <div class="front"> -->
+										<!-- <a href="detail.html"> -->
+										<!-- <img class="img-fluid" alt="Le nom de la rose" src="img/produits/produit11.jpg"></a> -->
+									<!-- </div> -->
+									<!-- <div class="back"> -->
+										<!-- <a href="detail.html"> -->
+										<!-- <img class="img-fluid" alt="Le nom de la rose" src="img/produits/produit12.jpg"></a> -->
+									<!-- </div> -->
+								<!-- </div> -->
+							<!-- </div> -->
+							<!-- <a class="invisible" href="#"><img class="img-fluid" alt="Le nom de la rose" src="img/produits/produit12.jpg"></a> -->
+							<!-- <div class="text"> -->
+								<!-- <h3><a href="#">Le nom de la rose</a> -->
+								<!-- </h3><p class="price"><del></del>325</p> -->
+								<!-- <p class="buttons" onclick="ajouterAuPanier(1)"> -->
+								<!-- <a class="btn btn-primary" href="#"><i class="fa fa-shopping-cart"></i>Ajouter au panier</a> -->
+								<!-- </p> -->
+							<!-- </div> -->
+						<!-- </div> -->
+					<!-- </div> -->
+					<!-- Produits 2 ...-->
 				</div>
+				<!-- FIN Affichage des produits -->				
 			</div>
 		</div>
 	</div>
@@ -113,15 +144,46 @@
 
 <!-- ========================== FOOTER ========================== -->
 <div id="footer">
-<div class="container">
-<div class="row">
-<div class="col-lg-3 col-md-6"></div>
-<div class="col-lg-3 col-md-6"></div>
-<div class="col-lg-3 col-md-6"></div>
-<div class="col-lg-3 col-md-6"></div>
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-3 col-md-6">
+			  <!-- <h4 class="mb-3">Pages</h4> -->
+			  <!-- <ul class="list-unstyled"> -->
+				<!-- <li><a href="text.html">About us</a></li> -->
+				<!-- <li><a href="text.html">Terms and conditions</a></li> -->
+				<!-- <li><a href="faq.html">FAQ</a></li> -->
+				<!-- <li><a href="javascript::" onclick="loadExternePage('contactTest.html');">Contact us</a></li> -->
+			  <!-- </ul> -->
+			  <!-- <hr> -->
+			  <!-- <h4 class="mb-3">User section</h4> -->
+			  <!-- <ul class="list-unstyled"> -->
+				<!-- <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li> -->
+				<!-- <li><a href="register.html">Regiter</a></li> -->
+			  <!-- </ul>		 -->
+		</div>
+		<div class="col-lg-3 col-md-6"></div>
+		<div class="col-lg-3 col-md-6"></div>
+		<div class="col-lg-3 col-md-6"></div>
+		</div>
+	</div>
 </div>
-</div>
-</div>
+
+<!-- ========================== copyright ========================== -->
+<div id="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-2 mb-lg-0">
+          <p class="text-center text-lg-left">©2019 Luis Santos.</p>
+        </div>
+        <div class="col-lg-6">
+          <p class="text-center text-lg-right">Template utilisé <a href="https://bootstrapious.com/e-commerce-templates">Bootstrapious:
+              E-commerce</a>
+            <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :)-->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -132,6 +194,6 @@
 <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="js/front.js"></script>
-<script src="js/app.js"></script>
+<script src="js/app.js"></script><!-- JavaScript app-->
 </body>
 </html>

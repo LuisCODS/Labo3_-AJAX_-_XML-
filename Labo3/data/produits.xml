@@ -10,7 +10,6 @@
             <image>img/produits/pantalons/pantalonID_1.jpg</image>
             <image>img/produits/pantalons/pantalonID_1_Back.jpg</image>
         </images>
-		<genre>25.00</genre>
     </produit>	
 	 <produit class="Pantalon">
         <id>2</id>
@@ -36,7 +35,7 @@
         <id>4</id>
 		<categorie>Homme</categorie>
         <titre>Chemise Coupe amincie</titre>
-        <prix>18.99</prix>
+        <prix>10.00</prix>
         <images> 
             <image>img/produits/chemises/Chemise1.jpg</image>
             <image>img/produits/chemises/Chemise12.jpg</image>
@@ -46,7 +45,7 @@
         <id>5</id>
 		<categorie>Homme</categorie>
         <titre>Chemise en jeans</titre>
-        <prix>38.99</prix>
+        <prix>30.00</prix>
         <images> 
             <image>img/produits/chemises/ChemiseJean1.jpg</image>
             <image>img/produits/chemises/ChemiseJean2.jpg</image>
@@ -56,7 +55,7 @@
         <id>6</id>
 		<categorie>Homme</categorie>
         <titre>Chemise en jeans</titre>
-        <prix>38.99</prix>
+        <prix>20.00</prix>
         <images> 
             <image>img/produits/chemises/chemisesCarreau1.jpg</image>
             <image>img/produits/chemises/chemisesCarreau2.jpg</image>
@@ -66,7 +65,7 @@
         <id>7</id>
 		<categorie>Homme</categorie>
         <titre>Chaussures de sport en cuir</titre>
-        <prix>88.99</prix>
+        <prix>20.00</prix>
         <images> 
             <image>img/produits/chaussures/Chaussures_ID_6_Back.jpg</image>
             <image>img/produits/chaussures/Chaussures_ID_6_Back.jpg</image>
@@ -76,7 +75,7 @@
         <id>8</id>
 		<categorie>Homme</categorie>
         <titre>Bottes chukka</titre>
-        <prix>68.99</prix>
+        <prix>20.00</prix>
         <images> 
             <image>img/produits/chaussures/chukka.jpg</image>
             <image>img/produits/chaussures/chukka_back.jpg</image>
@@ -87,7 +86,7 @@
         <id>100</id>
 		<categorie>Femme</categorie>
         <titre>Pantalon-cigarette</titre>
-        <prix>29.99</prix>
+        <prix>20.00</prix>
         <images> 
             <image>img/produits/pantalons/Femme_Id_8.jpg</image>
             <image>img/produits/pantalons/Femme_Id_8_Close.jpg</image>
@@ -97,7 +96,7 @@
         <id>101</id>
 		<categorie>Femme</categorie>
         <titre>Chandail en maille fine</titre>
-        <prix>5.00</prix>
+        <prix>10.00</prix>
         <images> 
             <image>img/produits/chemises/femme100-1.jpg</image>
             <image>img/produits/chemises/femme100-2.jpg</image>
@@ -127,7 +126,7 @@
         <id>104</id>
 		<categorie>Femme</categorie>
         <titre>Pantalon taille froncée</titre>
-        <prix>19.99</prix>
+        <prix>10.00</prix>
         <images> 
             <image>img/produits/pantalons/femme104-1.jpg</image>
             <image>img/produits/pantalons/femme104-2.jpg</image>
@@ -168,7 +167,7 @@
         <id>303</id>
 		<categorie>Kid</categorie>
         <titre>Chaussures de sport en toile</titre>
-        <prix>30.99</prix>
+        <prix>10.00</prix>
         <images> 
             <image>img/produits/chaussures/kid100.jpg</image>
             <image>img/produits/chaussures/kid200.jpg</image>

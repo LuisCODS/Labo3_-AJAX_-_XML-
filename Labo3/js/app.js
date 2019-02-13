@@ -75,14 +75,15 @@ Produit.prototype.setImages = function (images) {
         this.images = images;
 }
 // 
-//			 VARIABLES GLOBAUX
+//		VARIABLES GLOBAUX
 //  
 var tableauProduitsXML;
 var tableauProduits = new Array(); //contien tous les produits
 var panier=[];
  
 /*
- *METHODE: Display toutes les proprietes d'un Produit en format HTML
+ *METHODE: Display toutes les proprietes d'un Produit en format HTML* 
+ * href='javascript::'
 */
 Produit.prototype.afficher = function () {
     var contenu = "<div class='col-lg-3 col-md-4'>";
@@ -117,15 +118,17 @@ $(document).ready(function () {
     chargerProduits();
 });
 /*
-* METHODE: Fait la requête Ajax pour extraire les données provenant du fichier XML
+* METHODE: Fait la requête Ajax pour charger les données 
+* ...provenant du fichier XML dans la var global. tableauProduitsXML.
+* tableauProduitsXML: recoit la reference HTMLCollection(le tableau de tous les Produits)
 */
 function chargerProduits(){
 	$.ajax({
-		type:"GET",
+		type:"POST",
 		url:"data/produits.xml",
 		dataType:"xml",
 		success : function(liste){
-			tableauProduitsXML = liste;// recoit la reference HTMLCollection(le tableau de tous les Produits)
+			tableauProduitsXML = liste;
             RemplirTableauProduits();
             // $("#nbrProduits").html("Affichage de <strong>"+tableauProduits.length+"</strong> produits dans le catalogue")
 		},
@@ -135,31 +138,51 @@ function chargerProduits(){
 	});
 }
 /*
-* METHODE: Remplir un Tableau avec TOUS les Produits: cree un array 
-* ...pour faire la transposition des données importées en Objets<Produit>
+* METHODE: Fait la requête Ajax pour charger la page contact.html  sans load.
+*/
+function loadExternePage(thePage){
+	 //document.getElementById("affichageZone").style.visibility = "hidden";
+
+	if(thePage)
+	{
+		$.ajax(
+		{
+			type:"POST",
+			url:thePage,
+			dataType:"html",
+			success : function(data){
+				//charge la page externe dans la div
+				  $('#listeProduits').html(data);
+			},
+		});
+	}
+}
+/*
+* METHODE: Remplir un tableauDOM avec TOUS les Produits.
+* Il fait la transposition des données(XML) provenant du tableauProduitsXML
+* pour transposer en Objets<Produit>
 */
 function RemplirTableauProduits() {
-	//extrait les Produits du tableau HTMLCollection vers un nouveau tableau.
-    var tableau = tableauProduitsXML.getElementsByTagName("produit");
+
+    var tableauDOM = tableauProduitsXML.getElementsByTagName("produit");
+	console.log(tableauDOM);
     var produitToDisplay="";	
 	
-    for (var i = 0; i < tableau.length; i++) 
+    for (var i = 0; i < tableauDOM.length; i++) 
 	{			
-		//referencie un Produit pour chaque indice du tableau	
         tableauProduits[i] = new Produit(); 	
-		// le tableau image 
         var images = [
 						//chemin ou se retrouve l'image.
-						tableau[i].childNodes[9].childNodes[1].innerHTML,
-						tableau[i].childNodes[9].childNodes[3].innerHTML
+						tableauDOM[i].childNodes[9].childNodes[1].innerHTML,
+						tableauDOM[i].childNodes[9].childNodes[3].innerHTML
 					 ];
 		//peuple les proprietes du Produit en lui fournissant au constructeur les 5 parametres...
         tableauProduits[i].Produit(
-									tableau[i].childNodes[1].innerHTML,	//id
-									tableau[i].childNodes[3].innerHTML, // categorie
-									tableau[i].childNodes[5].innerHTML, // titre
-									tableau[i].childNodes[7].innerHTML,	// prix
-									images // le tableau image
+									tableauDOM[i].childNodes[1].innerHTML,	//id
+									tableauDOM[i].childNodes[3].innerHTML, // categorie
+									tableauDOM[i].childNodes[5].innerHTML, // titre
+									tableauDOM[i].childNodes[7].innerHTML,	// prix
+									images // le tableauDOM image
 								   );
 		//fait appel à la methode afficher() du Produit à l'indice i.
 		//...le retour c'est un Produit en format HTML avec l'ensemble des ses proprietes.
@@ -239,14 +262,17 @@ function showProduitsKid(tag) {
  * METHODE: ajoute les article au Panier
 */
 function ajouterAuPanier(id) { 
-    if (existe(id)){
+    if (existe(id))
+	{
         for (var i = 0; i < panier.length; i++)
             if (panier[i].id==id) {
                 panier[i].qte++;
                 break;
             }
-    }else panier.push({"id":id,"qte":1});
-    zonePanier();
+    }else{ 
+		panier.push({"id":id,"qte":1});				
+	}		
+	zonePanier();
     console.log(panier);
  }
 /*
@@ -262,7 +288,8 @@ function existe(id) {
 /*
  *METHODE:
 */
-function zonePanier() {
+function zonePanier() 
+{
     var prixTotal=0, nbrProduits=0;
     if (panier.length>0) {
         for(var i in panier){
@@ -274,7 +301,8 @@ function zonePanier() {
     $('#panier').html("("+nbrProduits+") " +prixTotal+" $");
 }
 /*
- *METHODE:
+ *METHODE: returne un produit correspondant à un ID donnée.
+ * tableauProduits: contien tous les produits
 */
 function produitById(id) {
 	
