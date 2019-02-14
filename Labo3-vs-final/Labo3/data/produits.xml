@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produits>
+
+    <produit>
+        <id zone="Terre">10</id>
+        <categorie>M4 SHERMAN</categorie>
+        <titre>M4 SHERMAN</titre>
+        <prix>220.000</prix>
+        <images>
+            <image>img/produits/terre/SHERMAN-1.jpg</image>
+            <image>img/produits/terre/SHERMAN-1.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">20</id>
+        <categorie>Char russe T34</categorie>
+        <titre>Char russe T34</titre>
+        <prix>120.000</prix>
+        <images>
+            <image>img/produits/terre/char-russe-t34-1.jpg</image>
+            <image>img/produits/terre/char-russe-t34-1.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">30</id>
+        <categorie>Char Morris </categorie>
+        <titre>Char Morris</titre>
+        <prix>180.000</prix>
+        <images>
+            <image>img/produits/terre/Morris-1.jpg</image>
+            <image>img/produits/terre/Morris-2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">40</id>
+        <categorie>DIAMOND T972</categorie>
+        <titre>DIAMOND T972</titre>
+        <prix>100.000</prix>
+        <images>
+            <image>img/produits/terre/diamons-1.jpg</image>
+            <image>img/produits/terre/diamons-2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">50</id>
+        <categorie>JEEP FORD " EARLY"</categorie>
+        <titre>JEEP FORD " EARLY"</titre>
+        <prix>90.000</prix>
+        <images>
+            <image>img/produits/terre/JeepFord-1.jpg</image>
+            <image>img/produits/terre/JeepFord-2.jpg</image>
+        </images>
+    </produit>
+	
+     <produit>
+        <id zone="Air">100</id>
+        <categorie>Dassault Super Mirage 4000</categorie>
+        <titre>Dassault Super Mirage 4000</titre>
+        <prix>800.000</prix>
+        <images>
+            <image>img/produits/avions/Dassault2.jpg</image>
+            <image>img/produits/avions/Dassault1.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">200</id>
+        <categorie>F 5000</categorie>
+        <titre>F 5000</titre>
+        <prix>700.000</prix>
+        <images>
+            <image>img/produits/avions/F500_1.jpg</image>
+            <image>img/produits/avions/F500_2.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">300</id>
+        <categorie>Dassault Mirage F1-C</categorie>
+        <titre>Dassault Mirage F1-C</titre>
+        <prix>700.000</prix>
+        <images>
+            <image>img/produits/avions/Dassault Mirage F1-1.jpg</image>
+            <image>img/produits/avions/Dassault Mirage F1-2.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">400</id>
+        <categorie>Gourevitch MiG-21F</categorie>
+        <titre>Mikoyan-Gourevitch MiG-21F 'Fishbed-C'</titre>
+        <prix>450.000</prix>
+        <images>
+            <image>img/produits/avions/Mikoyan-1.jpg </image>
+            <image>img/produits/avions/Mikoyan-2.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">500</id>
+        <categorie>Boeingc</categorie>
+        <titre>G boeingc 22-5</titre>
+        <prix>650.000</prix>
+        <images>
+            <image>img/produits/avions/Gboeingc22-5-1.jpg</image>
+            <image>img/produits/avions/Gboeingc22-5-2.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">600</id>
+        <categorie>Airbus H145M-1</categorie>
+        <titre>Airbus Helicopters H145M-1</titre>
+        <prix>490.000</prix>
+        <images>
+            <image>img/produits/hélicoptère/Airbus Helicopters H145M-1.jpg</image>
+           <image>img/produits/hélicoptère/Airbus Helicopters H145M-2.jpg</image>
+        </images>
+    </produit>
+	 <produit>
+        <id zone="Air">700</id>
+        <categorie>Sikorsky HH-60G</categorie>
+        <titre>Sikorsky HH-60G Pave Hawk</titre>
+        <prix>470.000</prix>
+        <images>
+            <image>img/produits/hélicoptère/Sikorsky HH-60G Pave Hawk-1.jpg</image>
+           <image>img/produits/hélicoptère/Sikorsky HH-60G Pave Hawk-2.jpg</image>
+        </images>
+    </produit>
+    
+	<produit>
+        <id zone="Mer">1</id>
+        <categorie>Le F5050</categorie>
+        <titre>Le F5050</titre>
+        <prix>900.00</prix>
+        <images>
+            <image>img/produits/mer/mer12.jpg</image>
+            <image>img/produits/mer/mer12.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">2</id>
+        <categorie>Alpha K-7000</categorie>
+        <titre>Alpha K-7000</titre>
+        <prix>600.000</prix>
+        <images>
+            <image>img/produits/mer/mer11.jpg</image>
+            <image>img/produits/mer/mer12.jpg</image>
+        </images>
+    </produit>	
+    <produit>
+        <id zone="Mer">3</id>
+        <categorie>Bateau NCSM Yellowknife</categorie>
+        <titre>NCSM Yellowknife</titre>
+        <prix>999.000</prix>
+        <images>
+            <image>img/produits/mer/NCSM Yellowknife (MM 706)-1.jpg</image>
+            <image>img/produits/mer/NCSM Yellowknife (MM 706)-1.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">4</id>
+        <categorie>Startpoint</categorie>
+        <titre>T-2050</titre>
+        <prix>999.000</prix>
+        <images>
+            <image>img/produits/mer/Startpoint-2.jpg</image>
+            <image>img/produits/mer/Startpoint-1.jpg</image>
+        </images>
+    </produit>
+</produits>
