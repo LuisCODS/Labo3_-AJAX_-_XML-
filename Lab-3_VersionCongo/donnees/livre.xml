@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LIVRES>
+  <LIVRE>
+    <categorie >Jeunesse</categorie>
+	<titre>La montagne noire</titre>
+     <prix>11.99 </prix>
+     <quantite>10</quantite>
+	 <description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+     <photo>./images/jeu1.jpg</photo>
+    <auteur>
+         <nom>Brouillet</nom>
+         <prenom>Christine</prenom>     
+    </auteur>
+ </LIVRE>
+ <LIVRE>
+    <categorie >Jeunesse</categorie>
+	<titre>Petitou et ses amis</titre>
+    <prix>13.99 </prix>
+    <quantite>2</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/jeu2.jpg</photo>
+    <auteur>
+       <nom>Laan</nom>
+       <prenom>Dick</prenom>
+    </auteur>
+   </LIVRE>
+  <LIVRE>
+    <categorie >Jeunesse</categorie>
+	<titre>L'épave du Cynthia</titre>
+    <prix>11.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/jeu3.jpg</photo>
+    <auteur>
+       <nom>Verne</nom>
+       <prenom>Jules</prenom>
+    </auteur>
+   </LIVRE>
+  <LIVRE>
+    <categorie >Littérature</categorie>
+	<titre>Un juge aux aveux</titre>
+    <prix>15.99 </prix>
+    <quantite>4</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/lit1.jpg</photo>
+    <auteur>
+       <nom>Batigne</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+   <LIVRE>
+    <categorie >Littérature</categorie>
+	<titre>L'école des meres</titre>
+    <prix>29.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/lit2.jpg</photo>
+    <auteur>
+       <nom>Molière</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+   <LIVRE>
+    <categorie >Actualité et Politique</categorie>
+	<titre>Lea titans</titre>
+    <prix>18.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/lit3.jpg</photo>
+    <auteur>
+       <nom>Molière</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+    <LIVRE>
+    <categorie >Actualité et Politique</categorie>
+	<titre>La chute de Sadam</titre>
+    <prix>9.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/lit4.jpg</photo>
+    <auteur>
+       <nom>Molière</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+   <LIVRE>
+    <categorie >Sciences et Techniques</categorie>
+	<titre>Programmer en C++</titre>
+    <prix>38.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/lit5.jpg</photo>
+    <auteur>
+       <nom>Molière</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+  <LIVRE>
+    <categorie >Sciences et Techniques</categorie>
+	<titre>Programmer en Java</titre>
+    <prix>42.99 </prix>
+    <quantite>3</quantite>
+	<description>
+	 Un roman cinématographique 
+	 drôle et engagé qui vous permettra d'ouvrir 
+	 le regard de vos élèves sur l'actualité
+	 </description>
+    <photo>./images/act1.jpg</photo>
+    <auteur>
+       <nom>Molière</nom>
+       <prenom>Jacques</prenom>
+    </auteur>
+   </LIVRE>
+</LIVRES>
