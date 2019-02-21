@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produits>
-	<!-- ================= MODE HOMME ================= -->
+<!-- * ====================================================================== -->
+							<!-- MODE HOMME -->
+<!-- * ====================================================================== -->
      <produit class="Pantalon">
         <id>1</id>
 		<categorie>Homme</categorie>
@@ -81,7 +83,9 @@
             <image>img/produits/chaussures/chukka_back.jpg</image>
         </images>
     </produit> 	
-	<!-- ================= MODE FEMME ================= -->
+<!-- * ====================================================================== -->
+							<!-- MODE FEMME -->
+<!-- * ====================================================================== -->	
 	<produit class="Pantalon">
         <id>100</id>
 		<categorie>Femme</categorie>
@@ -132,7 +136,9 @@
             <image>img/produits/pantalons/femme104-2.jpg</image>
         </images>
     </produit> 
-		<!-- ================= MODE KID ================= -->
+<!-- * ====================================================================== -->
+							<!-- MODE KID -->
+<!-- * ====================================================================== -->	
 	<produit class="Pantalon">
         <id>300</id>
 		<categorie>Kid</categorie>
@@ -173,4 +179,5 @@
             <image>img/produits/chaussures/kid200.jpg</image>
         </images>
     </produit> 	
-</produits>  
+
+	</produits>  
