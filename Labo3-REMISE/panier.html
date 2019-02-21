@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-lg-12">
+      <!-- breadcrumb-->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a onclick="accueil()" href="#">Accueil</a></li>
+          <li aria-current="page" class="breadcrumb-item active">Votre panier</li>
+        </ol>
+      </nav>
+    </div>
+    <div id="basket" class="col-lg-8">
+      <div class="box">
+        <form method="post" action="checkout1.html">
+          <h1>Votre panier</h1>
+          <p id="nbrProduitsPanier" class="text-muted">nbrProduitsPanier</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="2">Produit</th>
+                  <th>Quantité</th>
+                  <th>Prix unitaire</th>
+                  <th colspan="2">Total</th>
+                </tr>
+              </thead>
+              <tbody id="ligneProduit">
+                
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="5">Total</th>
+                  <th id="totalPanier" colspan="2">totalPanier</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.table-responsive-->
+          
+        </form>
+      </div>
+      <!-- /.box-->
+      
+    </div>
+    <!-- /.col-lg-9-->
+    <div class="col-lg-4">
+      <div id="order-summary" class="box">
+        <div class="box-header">
+          <h3 class="mb-0">Votre commande</h3>
+        </div>
+        <p class="text-muted">Avec frais de livraison, de douane et des forces supérieures 5% du prix</p>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Sous total</td>
+                <th id="sousTotal">sousTotal</th>
+              </tr>
+              <tr>
+                <td>Livraison et douane (5%)</td>
+                <th id="shipping">shipping</th>
+              </tr>
+              <tr>
+                <td>Taxe (10%)</td>
+                <th id="taxe">taxe</th>
+              </tr>
+              <tr class="total">
+                <td>Total</td>
+                <th id="total">total</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
+    <!-- /.col-md-3-->
+  </div>
+  <script>
+    $('#ligneProduit').html(lignesProduitsPanier());
+    majDonneesPanier();
+  </script>

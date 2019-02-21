@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produits>
+    <produit>
+        <id zone="Mer">1</id>
+        <categorie>Cat 1</categorie>
+        <titre>Zakaria Benmassaoud</titre>
+        <prix>235</prix>
+        <images>
+            <image>img/produits/1.1.jpg</image>
+            <image>img/produits/1.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">2</id>
+        <categorie>Cat 2</categorie>
+        <titre>Yassine Semmar</titre>
+        <prix>320</prix>
+        <images>
+            <image>img/produits/2.1.jpg</image>
+            <image>img/produits/2.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Air">3</id>
+        <categorie>Cat 3</categorie>
+        <titre>Luis Claudio Oliveira Dos Santos</titre>
+        <prix>417</prix>
+        <images>
+            <image>img/produits/3.1.jpg</image>
+            <image>img/produits/3.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">4</id>
+        <categorie>Cat 4</categorie>
+        <titre>Paulo Daniel Oliveira</titre>
+        <prix>520</prix>
+        <images>
+            <image>img/produits/4.1.jpg</image>
+            <image>img/produits/4.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">5</id>
+        <categorie>Cat 1</categorie>
+        <titre>Zakaria Benmassaoud</titre>
+        <prix>235</prix>
+        <images>
+            <image>img/produits/1.1.jpg</image>
+            <image>img/produits/1.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">6</id>
+        <categorie>Cat 2</categorie>
+        <titre>Yassine Semmar</titre>
+        <prix>320</prix>
+        <images>
+            <image>img/produits/2.1.jpg</image>
+            <image>img/produits/2.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Air">7</id>
+        <categorie>Cat 3</categorie>
+        <titre>Luis Claudio Oliveira Dos Santos</titre>
+        <prix>417</prix>
+        <images>
+            <image>img/produits/3.1.jpg</image>
+            <image>img/produits/3.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">8</id>
+        <categorie>Cat 4</categorie>
+        <titre>Paulo Daniel Oliveira</titre>
+        <prix>520</prix>
+        <images>
+            <image>img/produits/4.1.jpg</image>
+            <image>img/produits/4.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">9</id>
+        <categorie>Cat 1</categorie>
+        <titre>Zakaria Benmassaoud</titre>
+        <prix>235</prix>
+        <images>
+            <image>img/produits/1.1.jpg</image>
+            <image>img/produits/1.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Terre">10</id>
+        <categorie>Cat 2</categorie>
+        <titre>Yassine Semmar</titre>
+        <prix>320</prix>
+        <images>
+            <image>img/produits/2.1.jpg</image>
+            <image>img/produits/2.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Air">11</id>
+        <categorie>Cat 3</categorie>
+        <titre>Luis Claudio Oliveira Dos Santos</titre>
+        <prix>417</prix>
+        <images>
+            <image>img/produits/3.1.jpg</image>
+            <image>img/produits/3.2.jpg</image>
+        </images>
+    </produit>
+    <produit>
+        <id zone="Mer">12</id>
+        <categorie>Cat 4</categorie>
+        <titre>Paulo Daniel Oliveira</titre>
+        <prix>520</prix>
+        <images>
+            <image>img/produits/4.1.jpg</image>
+            <image>img/produits/4.2.jpg</image>
+        </images>
+    </produit>
+</produits>
